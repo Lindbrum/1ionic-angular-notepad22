@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e39c5258-11db-4523-9dfa-c093859f6889" name="Default Changelist" comment="lol232" />
+    <list id="90ec177d-52b9-445a-88e4-2b2168800a1b" name="Revert &quot;lol232&quot;" comment="Revert &quot;lol232&quot;&#10;&#10;This reverts commit 01d41f28" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="MIXED" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/poxmarco/Notepadtest5.git" />
+        <option value="https://github.com/poxmarco/ionic-angular-notepad2.git" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1bsCphu1pxoaK5DUcG0VonuRFuZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.Angular Application">
+    <configuration name="Tests (app)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests (app)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-package value="$PROJECT_DIR$/node_modules/protractor" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e39c5258-11db-4523-9dfa-c093859f6889" name="Default Changelist" comment="" />
+      <created>1589411599351</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589411599351</updated>
+      <workItem from="1589411605671" duration="3402000" />
+      <workItem from="1589743347424" duration="287000" />
+      <workItem from="1589750276371" duration="1673000" />
+      <workItem from="1589821264767" duration="68000" />
+      <workItem from="1589992659222" duration="190000" />
+      <workItem from="1590250713019" duration="763000" />
+      <workItem from="1590251909685" duration="233000" />
+      <workItem from="1590252239895" duration="323000" />
+      <workItem from="1590252574896" duration="148000" />
+      <workItem from="1590253140593" duration="10000" />
+      <workItem from="1590253186793" duration="162000" />
+    </task>
+    <task id="LOCAL-00001" summary="lol">
+      <created>1589751685352</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1589751685352</updated>
+    </task>
+    <task id="LOCAL-00002" summary="lol2">
+      <created>1589751910381</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589751910381</updated>
+    </task>
+    <task id="LOCAL-00003" summary="lol2">
+      <created>1590251477445</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1590251477445</updated>
+    </task>
+    <task id="LOCAL-00004" summary="lol2">
+      <created>1590251541882</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590251541882</updated>
+    </task>
+    <task id="LOCAL-00005" summary="lol232">
+      <created>1590251563608</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1590251563608</updated>
+    </task>
+    <task id="LOCAL-00006" summary="lol232">
+      <created>1590251808552</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590251808552</updated>
+    </task>
+    <task id="LOCAL-00007" summary="lol232">
+      <created>1590252322397</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590252322397</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="lol" />
+    <MESSAGE value="lol2" />
+    <MESSAGE value="lol232" />
+    <option name="LAST_COMMIT_MESSAGE" value="lol232" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="611" y="297" key="#Notifications" timestamp="1590252020587">
+      <screen x="0" y="23" width="1440" height="809" />
+    </state>
+    <state x="611" y="297" key="#Notifications/0.23.1440.809@0.23.1440.809" timestamp="1590252020587" />
+    <state x="248" y="12" key="CommitChangelistDialog2" timestamp="1590251590595">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="248" y="12" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1590251590595" />
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1590251785382">
+      <screen x="0" y="23" width="1440" height="809" />
+    </state>
+    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.23.1440.809@0.23.1440.809" timestamp="1590251785382" />
+    <state x="434" y="263" width="646" height="313" key="Github.ShareDialog" timestamp="1590253270615">
+      <screen x="0" y="23" width="1440" height="809" />
+    </state>
+    <state x="434" y="267" width="447" height="279" key="Github.ShareDialog/0.0.1440.900/-1360.0.1360.768@0.0.1440.900" timestamp="1589751649334" />
+    <state x="434" y="267" key="Github.ShareDialog/0.0.1440.900@0.0.1440.900" timestamp="1590251771573" />
+    <state x="434" y="263" width="646" height="313" key="Github.ShareDialog/0.23.1440.809@0.23.1440.809" timestamp="1590253270615" />
+    <state x="611" y="324" key="MultipleFileMergeDialog" timestamp="1590252465807">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="611" y="324" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1590252465807" />
+    <state x="229" y="66" key="SettingsEditor" timestamp="1590253348569">
+      <screen x="0" y="23" width="1440" height="809" />
+    </state>
+    <state x="229" y="48" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1590252719237" />
+    <state x="229" y="66" key="SettingsEditor/0.23.1440.809@0.23.1440.809" timestamp="1590253348569" />
+    <state x="320" y="194" key="Vcs.Push.Dialog.v2" timestamp="1590252410089">
+      <screen x="0" y="23" width="1440" height="809" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1360.0.1360.768@0.0.1440.900" timestamp="1589751921314" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1590251813431" />
+    <state x="320" y="194" key="Vcs.Push.Dialog.v2/0.23.1440.809@0.23.1440.809" timestamp="1590252410089" />
+    <state x="523" y="356" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590252296085">
+      <screen x="0" y="23" width="1440" height="809" />
+    </state>
+    <state x="523" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1590251751175" />
+    <state x="523" y="356" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.809@0.23.1440.809" timestamp="1590252296085" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1589414987933">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1589414987933" />
+  </component>
+</project>
