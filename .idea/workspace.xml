@@ -6,32 +6,13 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e39c5258-11db-4523-9dfa-c093859f6889" name="Default Changelist" comment="lol232" />
+    <list default="true" id="e39c5258-11db-4523-9dfa-c093859f6889" name="Default Changelist" comment="lol232">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <list id="90ec177d-52b9-445a-88e4-2b2168800a1b" name="Revert &quot;lol232&quot;" comment="Revert &quot;lol232&quot;&#10;&#10;This reverts commit 01d41f28" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +47,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.Angular Application">
@@ -121,7 +102,7 @@
       <workItem from="1590252239895" duration="323000" />
       <workItem from="1590252574896" duration="148000" />
       <workItem from="1590253140593" duration="10000" />
-      <workItem from="1590253186793" duration="162000" />
+      <workItem from="1590253186793" duration="1848000" />
     </task>
     <task id="LOCAL-00001" summary="lol">
       <created>1589751685352</created>
@@ -240,21 +221,25 @@
       <screen x="0" y="23" width="1440" height="809" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.23.1440.809@0.23.1440.809" timestamp="1590251785382" />
-    <state x="434" y="263" width="646" height="313" key="Github.ShareDialog" timestamp="1590253270615">
+    <state x="434" y="263" width="646" height="313" key="Github.ShareDialog" timestamp="1590253371796">
       <screen x="0" y="23" width="1440" height="809" />
     </state>
     <state x="434" y="267" width="447" height="279" key="Github.ShareDialog/0.0.1440.900/-1360.0.1360.768@0.0.1440.900" timestamp="1589751649334" />
     <state x="434" y="267" key="Github.ShareDialog/0.0.1440.900@0.0.1440.900" timestamp="1590251771573" />
-    <state x="434" y="263" width="646" height="313" key="Github.ShareDialog/0.23.1440.809@0.23.1440.809" timestamp="1590253270615" />
+    <state x="434" y="263" width="646" height="313" key="Github.ShareDialog/0.23.1440.809@0.23.1440.809" timestamp="1590253371796" />
+    <state x="452" y="132" key="Github.UntrackedFilesDialog" timestamp="1590253429892">
+      <screen x="0" y="23" width="1440" height="809" />
+    </state>
+    <state x="452" y="132" key="Github.UntrackedFilesDialog/0.23.1440.809@0.23.1440.809" timestamp="1590253429892" />
     <state x="611" y="324" key="MultipleFileMergeDialog" timestamp="1590252465807">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="611" y="324" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1590252465807" />
-    <state x="229" y="66" key="SettingsEditor" timestamp="1590253348569">
+    <state x="229" y="66" key="SettingsEditor" timestamp="1590253364231">
       <screen x="0" y="23" width="1440" height="809" />
     </state>
     <state x="229" y="48" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1590252719237" />
-    <state x="229" y="66" key="SettingsEditor/0.23.1440.809@0.23.1440.809" timestamp="1590253348569" />
+    <state x="229" y="66" key="SettingsEditor/0.23.1440.809@0.23.1440.809" timestamp="1590253364231" />
     <state x="320" y="194" key="Vcs.Push.Dialog.v2" timestamp="1590252410089">
       <screen x="0" y="23" width="1440" height="809" />
     </state>
