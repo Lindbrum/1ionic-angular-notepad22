@@ -49,11 +49,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.Angular Application">
+  <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Tests (app)" type="JavaScriptTestRunnerKarma">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
-      <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
@@ -82,6 +82,7 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -103,6 +104,8 @@
       <workItem from="1590252574896" duration="148000" />
       <workItem from="1590253140593" duration="10000" />
       <workItem from="1590253186793" duration="1848000" />
+      <workItem from="1604420921233" duration="602000" />
+      <workItem from="1604422282538" duration="198000" />
     </task>
     <task id="LOCAL-00001" summary="lol">
       <created>1589751685352</created>
@@ -157,7 +160,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -209,51 +212,21 @@
     <option name="LAST_COMMIT_MESSAGE" value="lol232" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="611" y="297" key="#Notifications" timestamp="1590252020587">
+    <state width="709" height="208" key="GridCell.Tab.0.bottom" timestamp="1604422279083">
       <screen x="0" y="23" width="1440" height="809" />
     </state>
-    <state x="611" y="297" key="#Notifications/0.23.1440.809@0.23.1440.809" timestamp="1590252020587" />
-    <state x="248" y="12" key="CommitChangelistDialog2" timestamp="1590251590595">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="248" y="12" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1590251590595" />
-    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog" timestamp="1590251785382">
+    <state width="709" height="208" key="GridCell.Tab.0.bottom/0.23.1440.809@0.23.1440.809" timestamp="1604422279083" />
+    <state width="709" height="208" key="GridCell.Tab.0.center" timestamp="1604422279081">
       <screen x="0" y="23" width="1440" height="809" />
     </state>
-    <state x="100" y="100" width="1240" height="700" key="DiffContextDialog/0.23.1440.809@0.23.1440.809" timestamp="1590251785382" />
-    <state x="434" y="263" width="646" height="313" key="Github.ShareDialog" timestamp="1590253371796">
+    <state width="709" height="208" key="GridCell.Tab.0.center/0.23.1440.809@0.23.1440.809" timestamp="1604422279081" />
+    <state width="709" height="208" key="GridCell.Tab.0.left" timestamp="1604422279081">
       <screen x="0" y="23" width="1440" height="809" />
     </state>
-    <state x="434" y="267" width="447" height="279" key="Github.ShareDialog/0.0.1440.900/-1360.0.1360.768@0.0.1440.900" timestamp="1589751649334" />
-    <state x="434" y="267" key="Github.ShareDialog/0.0.1440.900@0.0.1440.900" timestamp="1590251771573" />
-    <state x="434" y="263" width="646" height="313" key="Github.ShareDialog/0.23.1440.809@0.23.1440.809" timestamp="1590253371796" />
-    <state x="452" y="132" key="Github.UntrackedFilesDialog" timestamp="1590253429892">
+    <state width="709" height="208" key="GridCell.Tab.0.left/0.23.1440.809@0.23.1440.809" timestamp="1604422279081" />
+    <state width="709" height="208" key="GridCell.Tab.0.right" timestamp="1604422279082">
       <screen x="0" y="23" width="1440" height="809" />
     </state>
-    <state x="452" y="132" key="Github.UntrackedFilesDialog/0.23.1440.809@0.23.1440.809" timestamp="1590253429892" />
-    <state x="611" y="324" key="MultipleFileMergeDialog" timestamp="1590252465807">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="611" y="324" key="MultipleFileMergeDialog/0.0.1440.900@0.0.1440.900" timestamp="1590252465807" />
-    <state x="229" y="66" key="SettingsEditor" timestamp="1590253364231">
-      <screen x="0" y="23" width="1440" height="809" />
-    </state>
-    <state x="229" y="48" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1590252719237" />
-    <state x="229" y="66" key="SettingsEditor/0.23.1440.809@0.23.1440.809" timestamp="1590253364231" />
-    <state x="320" y="194" key="Vcs.Push.Dialog.v2" timestamp="1590252410089">
-      <screen x="0" y="23" width="1440" height="809" />
-    </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900/-1360.0.1360.768@0.0.1440.900" timestamp="1589751921314" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1590251813431" />
-    <state x="320" y="194" key="Vcs.Push.Dialog.v2/0.23.1440.809@0.23.1440.809" timestamp="1590252410089" />
-    <state x="523" y="356" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590252296085">
-      <screen x="0" y="23" width="1440" height="809" />
-    </state>
-    <state x="523" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900@0.0.1440.900" timestamp="1590251751175" />
-    <state x="523" y="356" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.809@0.23.1440.809" timestamp="1590252296085" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1589414987933">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1589414987933" />
+    <state width="709" height="208" key="GridCell.Tab.0.right/0.23.1440.809@0.23.1440.809" timestamp="1604422279082" />
   </component>
 </project>
