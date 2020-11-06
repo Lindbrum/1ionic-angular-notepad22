@@ -10,9 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e39c5258-11db-4523-9dfa-c093859f6889" name="Default Changelist" comment="lol232">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e39c5258-11db-4523-9dfa-c093859f6889" name="Default Changelist" comment="lol232" />
     <list id="90ec177d-52b9-445a-88e4-2b2168800a1b" name="Revert &quot;lol232&quot;" comment="Revert &quot;lol232&quot;&#10;&#10;This reverts commit 01d41f28" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,13 +45,14 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Tests (app)" type="JavaScriptTestRunnerKarma">
       <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
       <working-directory value="$PROJECT_DIR$" />
       <node-interpreter value="project" />
       <envs />
@@ -106,6 +105,7 @@
       <workItem from="1590253186793" duration="1848000" />
       <workItem from="1604420921233" duration="602000" />
       <workItem from="1604422282538" duration="198000" />
+      <workItem from="1604423409657" duration="231000" />
     </task>
     <task id="LOCAL-00001" summary="lol">
       <created>1589751685352</created>
@@ -228,5 +228,9 @@
       <screen x="0" y="23" width="1440" height="809" />
     </state>
     <state width="709" height="208" key="GridCell.Tab.0.right/0.23.1440.809@0.23.1440.809" timestamp="1604422279082" />
+    <state x="229" y="66" key="SettingsEditor" timestamp="1604423643030">
+      <screen x="0" y="23" width="1440" height="809" />
+    </state>
+    <state x="229" y="66" key="SettingsEditor/0.23.1440.809@0.23.1440.809" timestamp="1604423643030" />
   </component>
 </project>
