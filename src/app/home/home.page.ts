@@ -44,4 +44,8 @@ export class HomePage implements OnInit {
 
   }
 
+  goToLogin(){
+    this.navCtrl.navigateRoot('login');
+  }
+
 }
