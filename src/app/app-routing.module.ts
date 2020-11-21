@@ -6,7 +6,19 @@ const routes: Routes = [
 
   { path: 'notes', loadChildren: './home/home.module#HomePageModule' },
 
-  { path: 'notes/:id', loadChildren: './detail/detail.module#DetailPageModule' }
+  { path: 'notes/:id', loadChildren: './detail/detail.module#DetailPageModule' },  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'forgot-password',
+    loadChildren: () => import('./forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+  },
+  {
+    path: 'registration',
+    loadChildren: () => import('./registration/registration.module').then( m => m.RegistrationPageModule)
+  }
+
 ];
 
 @NgModule({
