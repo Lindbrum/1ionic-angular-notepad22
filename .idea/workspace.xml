@@ -11,21 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e39c5258-11db-4523-9dfa-c093859f6889" name="Default Changelist" comment="lol232">
-      <change afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/constants/urls.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/forgot-password/forgot-password-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/forgot-password/forgot-password.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/forgot-password/forgot-password.page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/forgot-password/forgot-password.page.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/forgot-password/forgot-password.page.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/forgot-password/forgot-password.page.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/home.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/notes.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/notes.service.ts" afterDir="false" />
     </list>
     <list id="90ec177d-52b9-445a-88e4-2b2168800a1b" name="Revert &quot;lol232&quot;" comment="Revert &quot;lol232&quot;&#10;&#10;This reverts commit 01d41f28" />
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +127,7 @@
       <workItem from="1605889005274" duration="449000" />
       <workItem from="1605890728183" duration="2938000" />
       <workItem from="1605952889166" duration="1220000" />
-      <workItem from="1605975414979" duration="8245000" />
+      <workItem from="1605975414979" duration="9054000" />
     </task>
     <task id="LOCAL-00001" summary="lol">
       <created>1589751685352</created>
