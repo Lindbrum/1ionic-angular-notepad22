@@ -1,9 +1,8 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Log In</ion-title>
+    <ion-title class="titolo">Log In</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -24,6 +23,7 @@
         <ion-button type="submit" color="danger" expand="block">Sign In</ion-button>
         <ion-button type="submit" color="primary" expand="block" [routerLink]="['/registration']">Register</ion-button>
         <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
+        <ion-button [routerLink]="['/notes']" class="back">Indietro</ion-button>
       </ion-col>
     </ion-row>
   </form>

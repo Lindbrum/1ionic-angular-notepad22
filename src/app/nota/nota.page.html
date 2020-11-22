@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="titolo">Nuova nota</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Textarea con placeholder -->
+  <ion-item>
+    <ion-textarea placeholder="Scrivi qui la tua nota..."></ion-textarea>
+  </ion-item>
+  <div class="outer">
+  <ion-button color="success" class="inner">Etichette</ion-button>
+  <ion-button color="warning" class="inner">Reminder</ion-button>
+  <ion-button color="medium" class="inner">Link</ion-button>
+  </div>
+  <div class="outer">
+  <ion-button [routerLink]="['/notes']" class="back">Indietro</ion-button>
+  <ion-button color="danger" (click)="addNote()">Salva</ion-button>
+  </div>
+</ion-content>
