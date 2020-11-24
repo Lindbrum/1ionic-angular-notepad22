@@ -10,16 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e39c5258-11db-4523-9dfa-c093859f6889" name="Default Changelist" comment="lol232">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/forgot-password/forgot-password.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/forgot-password/forgot-password.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/home.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/login/login.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/nota/nota.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/nota/nota.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/nota/nota.page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/nota/nota.page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/registration/registration.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/registration/registration.page.html" afterDir="false" />
-    </list>
+    <list default="true" id="e39c5258-11db-4523-9dfa-c093859f6889" name="Default Changelist" comment="lol232" />
     <list id="90ec177d-52b9-445a-88e4-2b2168800a1b" name="Revert &quot;lol232&quot;" comment="Revert &quot;lol232&quot;&#10;&#10;This reverts commit 01d41f28" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +128,7 @@
       <workItem from="1605975414979" duration="9279000" />
       <workItem from="1606058999289" duration="7473000" />
       <workItem from="1606210675651" duration="1542000" />
-      <workItem from="1606232606576" duration="3741000" />
+      <workItem from="1606232606576" duration="4325000" />
     </task>
     <task id="LOCAL-00001" summary="lol">
       <created>1589751685352</created>

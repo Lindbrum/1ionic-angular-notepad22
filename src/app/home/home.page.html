@@ -17,7 +17,7 @@
   <ion-list>
 
     <ion-item button detail *ngFor="let note of notesService.notes" [routerLink]="'/notes/' + note.id" routerDirection="forward">
-      <ion-icon name="reader-outline"></ion-icon> <ion-label>{{ note.title }}</ion-label>
+      <ion-icon name="reader"></ion-icon> <ion-label>{{ note.title }}</ion-label>
     </ion-item>
   </ion-list>
 
