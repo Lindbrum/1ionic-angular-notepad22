@@ -1,21 +1,21 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title class="titolo">Nuova nota</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="primary">
   <!-- Textarea con placeholder -->
   <ion-item>
-    <ion-textarea placeholder="Scrivi qui la tua nota..."></ion-textarea>
+    <ion-textarea placeholder="Scrivi qui la tua nota..." class="areaTesto"></ion-textarea>
   </ion-item>
   <div class="outer">
-  <ion-button color="success" class="inner">Etichette</ion-button>
-  <ion-button color="warning" class="inner">Reminder</ion-button>
-  <ion-button color="medium" class="inner">Link</ion-button>
+  <ion-button color="success" class="inner">Etichette &nbsp;<ion-icon name="pricetags-outline"></ion-icon></ion-button>
+  <ion-button color="warning" class="inner">Reminder &nbsp;<ion-icon name="notifications-outline"></ion-icon></ion-button>
+  <ion-button color="medium" class="inner">Link &nbsp;<ion-icon name="share-social-outline"></ion-icon></ion-button>
   </div>
   <div class="outer">
-  <ion-button [routerLink]="['/notes']" class="back">Indietro</ion-button>
-  <ion-button color="danger" (click)="addNote()">Salva</ion-button>
+  <ion-button [routerLink]="['/notes']" class="back" color="dark">Indietro</ion-button>
+  <ion-button color="dark" (click)="addNote()">Salva &nbsp;<ion-icon name="save-outline"></ion-icon></ion-button>
   </div>
 </ion-content>

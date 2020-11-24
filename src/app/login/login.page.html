@@ -1,12 +1,12 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
     </ion-buttons>
-    <ion-title class="titolo">Log In</ion-title>
+    <ion-title class="titolo">Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content color="primary">
   <form>
     <ion-item lines="full">
       <ion-label position="floating">Email</ion-label>
@@ -20,10 +20,10 @@
 
     <ion-row>
       <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Sign In</ion-button>
-        <ion-button type="submit" color="primary" expand="block" [routerLink]="['/registration']">Register</ion-button>
-        <a [routerLink]="['/forgot-password']" class="small-text">Forgot Password?</a>
-        <ion-button [routerLink]="['/notes']" class="back">Indietro</ion-button>
+        <ion-button type="submit" color="danger" expand="block">Entra</ion-button>
+        <ion-button type="submit" color="primary" expand="block" [routerLink]="['/registration']" color="dark">Registrati</ion-button>
+        <a [routerLink]="['/forgot-password']" class="small-text">Password dimenticata?</a>
+        <ion-button [routerLink]="['/notes']" class="back" color="dark">Indietro</ion-button>
       </ion-col>
     </ion-row>
   </form>
