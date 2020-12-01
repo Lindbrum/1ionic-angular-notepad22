@@ -14,12 +14,12 @@ export class NotaPage implements OnInit {
 ngOnInit(){
   this.notesService.load();
 }
-
+// funzione chiamata dal pulsante "salva"
 addNote(){
 
   this.alertCtrl.create({
-    header: 'nuova nota dimenticone del cazzo',
-    message: 'se non metti un titolo allora mi devo proprio incazzare?',
+    header: 'nuova nota',
+    message: 'Inserisci un titolo',
     inputs: [
       {
         type: 'text',
@@ -28,10 +28,10 @@ addNote(){
     ],
     buttons: [
       {
-        text: 'elimina sto schifo'
+        text: 'elimina'
       },
       {
-        text: 'salviamo il covid come nota',
+        text: 'salva',
         handler: (data) => {
           this.notesService.createNote(data.title);
         }
