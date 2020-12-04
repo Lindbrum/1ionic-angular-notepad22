@@ -34,6 +34,7 @@ addNote(){
         text: 'salva',
         handler: (data) => {
           this.notesService.createNote(data.title);
+
         }
       }
     ]

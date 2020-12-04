@@ -1,0 +1,18 @@
+GET http://localhost:3306/laravel/candidature
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:3306/laravel/candidature
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:3306/
+Accept: */*
+Cache-Control: no-cache
+
+###
+
