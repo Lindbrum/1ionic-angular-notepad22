@@ -5,9 +5,12 @@
 </ion-header>
 
 <ion-content color="primary">
+  <ion-item>
+    <ion-input [(ngModel)]="title" placeholder="Titolo" class="titolo"></ion-input>
+  </ion-item>
   <!-- Textarea con placeholder -->
   <ion-item>
-    <ion-textarea placeholder="Scrivi qui la tua nota..." class="areaTesto"></ion-textarea>
+    <ion-textarea [(ngModel)]="content" placeholder="Scrivi qui la tua nota..." class="areaTesto"></ion-textarea>
   </ion-item>
   <div class="outer">
   <ion-button color="success" class="inner">Etichette &nbsp;<ion-icon name="pricetags-outline"></ion-icon></ion-button>

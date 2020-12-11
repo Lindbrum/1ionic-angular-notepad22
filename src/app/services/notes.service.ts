@@ -56,8 +56,8 @@ export class NotesService {
     // Return the note that has an id matching the id passed in
     return this.notes.find(note => note.id === id);
   }
-
-  createNote(title): void {
+/*
+  createNote(title, content): void {
 
     // Create a unique id that is one larger than the current largest id
     // tslint:disable-next-line:radix
@@ -67,6 +67,23 @@ export class NotesService {
       id: id.toString(),
       title,
       content: ''
+    });
+
+    this.save();
+
+  }
+*/
+
+  createNote(title, content): void {
+
+    // Create a unique id that is one larger than the current largest id
+    // tslint:disable-next-line:radix
+    const id = Math.max(...this.notes.map(note => parseInt(note.id)), 0) + 1;
+
+    this.notes.push({
+      id: id.toString(),
+      title,
+      content
     });
 
     this.save();

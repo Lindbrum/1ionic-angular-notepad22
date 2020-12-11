@@ -15,8 +15,8 @@ export class HomePage implements OnInit {
   ngOnInit(){
     this.notesService.load();
   }
-
-  addNote(){
+/*
+   addNote(){
 
     this.alertCtrl.create({
       header: 'nuova nota',
@@ -43,7 +43,7 @@ export class HomePage implements OnInit {
     });
 
   }
-
+*/
   goToLogin(){
     this.navCtrl.navigateRoot('login');
   }

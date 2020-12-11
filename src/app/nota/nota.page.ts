@@ -8,6 +8,8 @@ import {AlertController, NavController} from '@ionic/angular';
   styleUrls: ['./nota.page.scss'],
 })
 export class NotaPage implements OnInit {
+  title: any;
+  content: any;
 
   constructor(public notesService: NotesService, private alertCtrl: AlertController, private navCtrl: NavController ) {
 }
@@ -16,7 +18,9 @@ ngOnInit(){
 }
 // funzione chiamata dal pulsante "salva"
 addNote(){
-
+  this.notesService.createNote(this.title, this.content);
+  this.navCtrl.back();
+/*
   this.alertCtrl.create({
     header: 'nuova nota',
     message: 'Inserisci un titolo',
@@ -41,7 +45,7 @@ addNote(){
   }).then((alert) => {
     alert.present();
   });
-
+*/
 }
 
 goToLogin(){
