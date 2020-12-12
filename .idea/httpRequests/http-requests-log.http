@@ -1,18 +1,17 @@
-GET http://localhost:3306/laravel/candidature
-Accept: */*
-Cache-Control: no-cache
+POST http://localhost:8080/note/add?title=spesa&content=BAGUETTE&user=lor
+
+}
+
+<> 2020-12-12T174400.200.txt
 
 ###
 
-GET http://localhost:3306/laravel/candidature
-Accept: */*
-Cache-Control: no-cache
+
+
+POST http://localhost:8080/note/add?title=spesa&content=BAGUETTE&user=lor
+
+
+
+}
 
 ###
-
-GET http://localhost:3306/
-Accept: */*
-Cache-Control: no-cache
-
-###
-

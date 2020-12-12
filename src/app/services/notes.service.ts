@@ -2,9 +2,10 @@ import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 
 import { Note } from '../interfaces/note';
-import {HttpClient} from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {Urls} from '../constants/urls';
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,9 @@ export class NotesService {
   public notes: Note[] = [];
   public loaded = false;
 
-  constructor(private storage: Storage ) {
+
+
+  constructor(private storage: Storage, private http: HttpClient ) {
 
   }
 /*
@@ -54,6 +57,7 @@ export class NotesService {
 
   getNote(id): Note {
     // Return the note that has an id matching the id passed in
+    // console.log(this.http.get('http://localhost:8080/note/all'));
     return this.notes.find(note => note.id === id);
   }
 /*
@@ -86,14 +90,34 @@ export class NotesService {
       content
     });
 
-    this.save();
 
+    const postData = {
+      title,
+      content,
+      user: '0000252525'
+    };
+    this.save();
+    console.log('ok') ;
+    this.http.post('http://localhost:8080/note/add?title=' + title + '&content=' + content + '&user=lor', '').
+    subscribe(response => console.log(response));
   }
 
   deleteNote(note): void {
 
     // Get the index in the array of the note that was passed in
     const index = this.notes.indexOf(note);
+    console.log('ok') ;
+    // this.http.get('http://localhost:8080/note/all').subscribe(response => console.log(response));
+  /*  {
+      console.log(data);
+      this.result = data;
+    }, error =>
+    {
+      console.log(error);
+    }, () =>
+    {
+      console.log('complete!');
+    });*/
 
     // Delete that element of the array and resave the data
     if (index > -1){
