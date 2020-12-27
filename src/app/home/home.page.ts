@@ -12,9 +12,8 @@ export class HomePage implements OnInit {
   constructor(public notesService: NotesService, private alertCtrl: AlertController, private navCtrl: NavController){
 
   }
-  ngOnInit(){
-    this.notesService.load();
-  }
+
+
 /*
    addNote(){
 
@@ -44,6 +43,12 @@ export class HomePage implements OnInit {
 
   }
 */
+
+  // tslint:disable-next-line:ban-types
+  filterTerm: String;
+  ngOnInit(){
+    this.notesService.load();
+  }
   goToLogin(){
     this.navCtrl.navigateRoot('login');
   }
