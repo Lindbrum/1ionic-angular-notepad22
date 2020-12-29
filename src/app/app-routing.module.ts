@@ -2,11 +2,16 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
+  {
+    path: 'splash',
+    loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
+  },
   { path: '', redirectTo: 'notes', pathMatch: 'full' },
 
   { path: 'notes', loadChildren: './home/home.module#HomePageModule' },
 
-  { path: 'notes/:id', loadChildren: './detail/detail.module#DetailPageModule' },  {
+  { path: 'notes/:id', loadChildren: './detail/detail.module#DetailPageModule' },
+  {
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
