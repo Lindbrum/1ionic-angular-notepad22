@@ -78,7 +78,7 @@ export class NotesService {
   }
 */
 
-  createNote(title, content): void {
+  createNote(title: string, content: string, color: string): void {
 
     // Create a unique id that is one larger than the current largest id
     // tslint:disable-next-line:radix
@@ -87,7 +87,8 @@ export class NotesService {
     this.notes.push({
       id: id.toString(),
       title,
-      content
+      content, color
+
     });
 
 
@@ -98,6 +99,10 @@ export class NotesService {
     };
     this.save();
     console.log('ok') ;
+    // mettere color e id
+    // this.http.post('http://localhost:8080/note/add?title=' + title + '
+    // &content=' + content + '&user=lor'+ &color=' + color + '&id='+id , '').
+
     this.http.post('http://localhost:8080/note/add?title=' + title + '&content=' + content + '&user=lor', '').
     subscribe(response => console.log(response));
   }

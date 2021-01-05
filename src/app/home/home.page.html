@@ -18,10 +18,11 @@
 
   <ion-list>
 
-    <ion-item button *ngFor="let data of notesService.notes | filter:filterTerm"
-              [routerLink]="'/notes/' + data.id" routerDirection="forward">
+    <ion-item  button *ngFor="let data of notesService.notes | filter:filterTerm"
+              [routerLink]="'/notes/' + data.id" routerDirection="forward" [color]="data.color">
       <ion-icon name="reader"></ion-icon>
-      <ion-label>{{data.title}}</ion-label>
+      <ion-label >{{data.title}}</ion-label>
+
     </ion-item>
   </ion-list>
 

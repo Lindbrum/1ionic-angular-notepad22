@@ -4,6 +4,14 @@
       <ion-back-button defaultHref="/notes"></ion-back-button>
     </ion-buttons>
     <ion-title>{{ note.title }}</ion-title>
+
+    <ion-radio-group  slot="end"   (ionChange)="note.color">
+      <ion-radio color="success" value="success" ></ion-radio> &nbsp;
+      <ion-radio color="danger" value="danger" ></ion-radio> &nbsp;
+      <ion-radio color="tertiary" value="tertiary" ></ion-radio> &nbsp;
+      <ion-radio  color="warning" value="warning"  ></ion-radio>
+    </ion-radio-group>
+
     <ion-buttons slot="end">
       <ion-button (click)="deleteNote()">
         <ion-icon slot="icon-only" name="trash"></ion-icon>
@@ -15,3 +23,4 @@
 <ion-content class="ion-padding">
   <ion-textarea auto-grow (input)="noteChanged()" [(ngModel)]="note.content" placeholder="...metti una descrizione per bestemmiare come me"></ion-textarea>
 </ion-content>
+

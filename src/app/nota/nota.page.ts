@@ -10,6 +10,7 @@ import {AlertController, NavController} from '@ionic/angular';
 export class NotaPage implements OnInit {
   title: any;
   content: any;
+  color: string;
 
   constructor(public notesService: NotesService, private alertCtrl: AlertController, private navCtrl: NavController ) {
 }
@@ -18,7 +19,7 @@ ngOnInit(){
 }
 // funzione chiamata dal pulsante "salva"
 addNote(){
-  this.notesService.createNote(this.title, this.content);
+  this.notesService.createNote(this.title, this.content, this.color);
   this.navCtrl.back();
 /*
   this.alertCtrl.create({

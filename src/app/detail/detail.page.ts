@@ -11,7 +11,8 @@ import { Note } from '../interfaces/note';
 })
 export class DetailPage implements OnInit {
 
-  public note: Note;
+  public note: { id: string; title: string; content: string; color: string };
+  color: string;
 
   constructor(private route: ActivatedRoute, private notesService: NotesService, private navCtrl: NavController) {
 
@@ -19,7 +20,8 @@ export class DetailPage implements OnInit {
     this.note = {
       id: '',
       title: '',
-      content: ''
+      content: '',
+      color: ''
     };
 
   }
@@ -33,16 +35,20 @@ export class DetailPage implements OnInit {
     // This handles the case where the detail page is loaded directly via the URL
     if (this.notesService.loaded){
       this.note = this.notesService.getNote(noteId);
+
     } else {
       this.notesService.load().then(() => {
         this.note = this.notesService.getNote(noteId);
+
       });
     }
 
   }
 
   noteChanged(){
-    this.notesService.save();
+
+
+this.notesService.save();
   }
 
   deleteNote(){

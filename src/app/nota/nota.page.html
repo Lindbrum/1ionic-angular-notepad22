@@ -1,12 +1,21 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title class="titolo">Nuova nota</ion-title>
+
+
+    <ion-radio-group [(ngModel)]="color"  slot="end"    (ionChange)="color">
+      <ion-radio color="success" value="success"></ion-radio> &nbsp;
+      <ion-radio color="danger" value="danger"></ion-radio> &nbsp;
+      <ion-radio color="tertiary" value="tertiary"></ion-radio> &nbsp;
+      <ion-radio  color="warning" value="warning" ></ion-radio>
+    </ion-radio-group>
   </ion-toolbar>
 </ion-header>
 
 <ion-content color="primary">
   <ion-item>
     <ion-input [(ngModel)]="title" placeholder="Titolo" class="titolo"></ion-input>
+
   </ion-item>
   <!-- Textarea con placeholder -->
   <ion-item>
