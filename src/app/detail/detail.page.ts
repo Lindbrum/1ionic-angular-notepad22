@@ -11,7 +11,7 @@ import { Note } from '../interfaces/note';
 })
 export class DetailPage implements OnInit {
 
-  public note: { id: string; title: string; content: string; color: string };
+  public note: { id: string; title: string; content: string; color: string, id_user: string };
   color: string;
 
   constructor(private route: ActivatedRoute, private notesService: NotesService, private navCtrl: NavController) {
