@@ -22,7 +22,7 @@ export class DetailPage implements OnInit {
       id: '',
       title: '',
       content: '',
-      color: ''
+      color: '',
     };
 
   }
