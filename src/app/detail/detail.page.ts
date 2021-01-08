@@ -18,6 +18,7 @@ export class DetailPage implements OnInit {
 
     // Initialise a placeholder note until the actual note can be loaded in
     this.note = {
+      id_user: '',
       id: '',
       title: '',
       content: '',
