@@ -106,8 +106,9 @@ export class NotesService {
 
     // Get the index in the array of the note that was passed in
     const index = this.notes.indexOf(note);
-    console.log('ok') ;
-    // this.http.get('http://localhost:8080/note/all').subscribe(response => console.log(response));
+    console.log(index) ;
+
+    this.http.delete('http://localhost:8080/note?id=' + (index + 1)).subscribe(response => console.log(response));
   /*  {
       console.log(data);
       this.result = data;
@@ -118,12 +119,12 @@ export class NotesService {
     {
       console.log('complete!');
     });*/
-
+// localhost:8080/note?id=2
     // Delete that element of the array and resave the data
     if (index > -1){
       this.notes.splice(index, 1);
       this.save();
-    }
+ }
 
   }
 
