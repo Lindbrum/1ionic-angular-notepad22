@@ -5,6 +5,8 @@ import { Note } from '../interfaces/note';
 import { HttpClient, HttpHeaders, HttpRequest } from '@angular/common/http';
 import {Observable, of} from 'rxjs';
 import {Urls} from '../constants/urls';
+import {not} from 'rxjs/internal-compatibility';
+
 
 
 @Injectable({
@@ -13,6 +15,7 @@ import {Urls} from '../constants/urls';
 export class NotesService {
 
   public notes: Note[] = [];
+  public nuut;
   public loaded = false;
 
 
@@ -31,20 +34,28 @@ export class NotesService {
 
     // Return a promise so that we know when this operation has completed
     return new Promise((resolve) => {
-
+     // this.http.get('http://localhost:8080/note/all').subscribe(result => this.notes = result));
       // Get the notes that were saved into storage
-      this.storage.get('notes').then((notes) => {
+    console.log(this.http.get('http://localhost:8080/note/all').subscribe(response => console.log(response)));
+
+
+    // this.http.get('http://localhost:8080/note/all').subscribe(result => this.nuut  = result);
+    this.storage.get('notes').then((notes) => {
+
 
         // Only set this.notes to the returned value if there were values stored
-        if (notes != null){
-          this.notes = notes;
+      if (this.nuut != null){
+          this.notes = this.nuut;
         }
 
         // This allows us to check if the data has been loaded in or not
-        this.loaded = true;
-        resolve(true);
+      this.loaded = true;
+      resolve(true);
 
       });
+
+
+
 
     });
 
@@ -55,9 +66,20 @@ export class NotesService {
     this.storage.set('notes', this.notes);
   }
 
+getAllNote(): Observable<Note[]> {
+  return this.http.get<Note[]>('http://localhost:8080/note/all');
+}
+
+
+
   getNote(id): Note {
     // Return the note that has an id matching the id passed in
     // console.log(this.http.get('http://localhost:8080/note/all'));
+    // tslint:disable-next-line:prefer-const
+
+
+
+
     return this.notes.find(note => note.id === id);
   }
 /*
@@ -85,18 +107,13 @@ export class NotesService {
     const id = Math.max(...this.notes.map(note => parseInt(note.id)), 0) + 1;
 
     this.notes.push({
+      id_user: '',
       id: id.toString(),
       title,
       content, color
 
     });
 
-
-    const postData = {
-      title,
-      content,
-      user: '0000252525'
-    };
     this.save();
     console.log('ok') ;
     // mettere color e id
@@ -111,8 +128,9 @@ export class NotesService {
 
     // Get the index in the array of the note that was passed in
     const index = this.notes.indexOf(note);
-    console.log('ok') ;
-    // this.http.get('http://localhost:8080/note/all').subscribe(response => console.log(response));
+    console.log(index) ;
+
+    this.http.delete('http://localhost:8080/note?id=' + (index + 1)).subscribe(response => console.log(response));
   /*  {
       console.log(data);
       this.result = data;
@@ -123,12 +141,13 @@ export class NotesService {
     {
       console.log('complete!');
     });*/
-
+// localhost:8080/note?id=2
     // Delete that element of the array and resave the data
-    if (index > -1){
+    if (index > -1) { }{
       this.notes.splice(index, 1);
+
       this.save();
-    }
+ }
 
   }
 
