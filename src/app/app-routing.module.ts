@@ -26,7 +26,11 @@ const routes: Routes = [
   {
     path: 'nota',
     loadChildren: () => import('./nota/nota.module').then( m => m.NotaPageModule)
+  },  {
+    path: 'modal',
+    loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
   }
+
 
 ];
 

@@ -22,8 +22,7 @@
     <ion-textarea [(ngModel)]="content" placeholder="Scrivi qui la tua nota..." class="areaTesto"></ion-textarea>
   </ion-item>
   <div class="outer">
-  <ion-button color="success" class="inner">Etichette &nbsp;<ion-icon name="pricetags-outline"></ion-icon></ion-button>
-  <ion-button color="warning" class="inner">Reminder &nbsp;<ion-icon name="notifications-outline"></ion-icon></ion-button>
+  <ion-button color="warning" class="inner" (click)="showModal()">Reminder &nbsp;<ion-icon name="notifications-outline"></ion-icon></ion-button>
   <ion-button color="medium" class="inner">Link &nbsp;<ion-icon name="share-social-outline"></ion-icon></ion-button>
   </div>
   <div class="outer">

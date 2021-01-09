@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {NotesService} from '../services/notes.service';
 import {AlertController, NavController} from '@ionic/angular';
+import {ModalController} from '@ionic/angular';
+import {ModalPage} from '../modal/modal.page';
 
 @Component({
   selector: 'app-nota',
@@ -12,7 +14,8 @@ export class NotaPage implements OnInit {
   content: any;
   color: string;
 
-  constructor(public notesService: NotesService, private alertCtrl: AlertController, private navCtrl: NavController ) {
+  constructor(public notesService: NotesService, private alertCtrl: AlertController, private navCtrl: NavController,
+              private modalCtrl: ModalController ) {
 }
 ngOnInit(){
   this.notesService.load();
@@ -21,36 +24,21 @@ ngOnInit(){
 addNote(){
   this.notesService.createNote(this.title, this.content, this.color);
   this.navCtrl.back();
-/*
-  this.alertCtrl.create({
-    header: 'nuova nota',
-    message: 'Inserisci un titolo',
-    inputs: [
-      {
-        type: 'text',
-        name: 'title'
-      }
-    ],
-    buttons: [
-      {
-        text: 'elimina'
-      },
-      {
-        text: 'salva',
-        handler: (data) => {
-          this.notesService.createNote(data.title);
 
-        }
-      }
-    ]
-  }).then((alert) => {
-    alert.present();
-  });
-*/
 }
 
 goToLogin(){
   this.navCtrl.navigateRoot('login');
 }
+
+async showModal(){
+    const modal = await this.modalCtrl.create({
+      component: ModalPage
+    }).then( modals => {
+        modals.present();
+    });
+
+}
+
 
 }

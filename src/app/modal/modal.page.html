@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Data&Time</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-input placeholder="Titolo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Luogo"></ion-input>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+    <ion-item>
+      <ion-label>Start Date</ion-label>
+      <ion-datetime placeholder="Select Date" min="2021" max="2021"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Data inizio</ion-label>
+      <ion-datetime display-format="h:mm A" picker-format="h:mm A"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fine</ion-label>
+      <ion-datetime placeholder="Select Date" min="2021" max="2021"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Ripetizione</ion-label>
+      <ion-datetime placeholder="Never" disabled></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Travel Time</ion-label>
+      <ion-datetime placeholder="None" disabled></ion-datetime>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+    <ion-item>
+      <ion-label>Alert</ion-label>
+      <ion-datetime placeholder="None"></ion-datetime>
+    </ion-item>
+  </ion-list>
+<ion-button (click)="close()" fill="clear">chiudi</ion-button>
+
+</ion-content>
