@@ -53,7 +53,7 @@ this.notesService.save();
   }
 
   deleteNote(){
-    this.notesService.deleteNote(this.note.id);
+    this.notesService.deleteNote(this.route.snapshot.paramMap.get('id'));
     this.navCtrl.navigateBack('/notes');
   }
 

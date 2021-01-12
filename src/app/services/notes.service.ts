@@ -91,7 +91,7 @@ getAllNote(): Observable < Note[] > {
     // console.log(this.http.get('http://localhost:8080/note/all'));
     // tslint:disable-next-line:prefer-const
 
-    return this.http.get<Note>('http://localhost:8080/note/all?id=' + id);
+    return this.http.get<Note>('http://localhost:8080/note/all/' + id);
     // return this.notes.find(note => note.id === id);
   }
 /*
@@ -142,7 +142,7 @@ getAllNote(): Observable < Note[] > {
 
     console.log(id) ;
 
-    this.http.delete('http://localhost:8080/note?id=' + (id )).subscribe(response => console.log(response));
+    this.http.delete('http://localhost:8080/note?id=' + (id)).subscribe(response => console.log(response));
   /*  {
       console.log(data);
       this.result = data;
