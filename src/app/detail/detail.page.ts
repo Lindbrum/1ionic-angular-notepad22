@@ -35,11 +35,11 @@ export class DetailPage implements OnInit {
     // Check that the data is loaded before getting the note
     // This handles the case where the detail page is loaded directly via the URL
     if (this.notesService.loaded){
-      this.note = this.notesService.getNote(noteId);
+      this.notesService.getNote(noteId).subscribe(result => this.note = result);
 
     } else {
       this.notesService.load().then(() => {
-        this.note = this.notesService.getNote(noteId);
+        this.notesService.getNote(noteId).subscribe(result => this.note = result);
 
       });
     }
@@ -53,7 +53,7 @@ this.notesService.save();
   }
 
   deleteNote(){
-    this.notesService.deleteNote(this.note);
+    this.notesService.deleteNote(this.note.id);
     this.navCtrl.navigateBack('/notes');
   }
 
