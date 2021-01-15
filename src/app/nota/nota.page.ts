@@ -23,6 +23,7 @@ ngOnInit(){
 // funzione chiamata dal pulsante "salva"
 addNote(){
   this.notesService.createNote(this.title, this.content, this.color);
+  this.notesService.load();
   this.navCtrl.back();
 
 }
