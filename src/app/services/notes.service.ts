@@ -15,7 +15,7 @@ import {not} from 'rxjs/internal-compatibility';
 export class NotesService {
 
   public notes: Note[] = [];
-  public nuut;
+  public nuut : Note;
   public loaded = false;
 
 
@@ -36,25 +36,39 @@ export class NotesService {
     return new Promise((resolve) => {
      // this.http.get('http://localhost:8080/note/all').subscribe(result => this.notes = result));
       // Get the notes that were saved into storage
-    console.log(this.http.get('http://localhost:8080/note/all').subscribe(response => console.log(response)));
+  this.http.get('http://localhost:8080/note/all').subscribe(response => console.log(response));
+  this.getAllNote().subscribe(result => console.log(result));
+  this.storage.get('notes').then((notes) => console.log(notes));
 
-
-    // this.http.get('http://localhost:8080/note/all').subscribe(result => this.nuut  = result);
-    this.storage.get('notes').then((notes) => {
+      // this.http.get('http://localhost:8080/note/all').subscribe(result => this.notes  = result);
+  /*this.storage.get('notes').then((notes) => {
 
 
         // Only set this.notes to the returned value if there were values stored
-      if (this.nuut != null){
-          this.notes = this.nuut;
+      if (notes != null){
+          this.notes = notes;
         }
-
-        // This allows us to check if the data has been loaded in or not
+    // this.getAllNote().subscribe(result => this.notes  = result) ;
+    // This allows us to check if the data has been loaded in or not
       this.loaded = true;
       resolve(true);
 
+    });*/
+
+
+  this.getAllNote().subscribe(result => {
+
+
+        // Only set this.notes to the returned value if there were values stored
+        if (result != null){
+          this.notes = result;
+        }
+        // this.getAllNote().subscribe(result => this.notes  = result) ;
+        // This allows us to check if the data has been loaded in or not
+        this.loaded = true;
+        resolve(true);
+
       });
-
-
 
 
     });
@@ -66,21 +80,19 @@ export class NotesService {
     this.storage.set('notes', this.notes);
   }
 
-getAllNote(): Observable<Note[]> {
+getAllNote(): Observable < Note[] > {
   return this.http.get<Note[]>('http://localhost:8080/note/all');
 }
 
 
 
-  getNote(id): Note {
+  getNote(id): Observable<Note> {
     // Return the note that has an id matching the id passed in
     // console.log(this.http.get('http://localhost:8080/note/all'));
     // tslint:disable-next-line:prefer-const
 
-
-
-
-    return this.notes.find(note => note.id === id);
+    return this.http.get<Note>('http://localhost:8080/note/all/' + id);
+    // return this.notes.find(note => note.id === id);
   }
 /*
   createNote(title, content): void {
@@ -120,17 +132,17 @@ getAllNote(): Observable<Note[]> {
     // this.http.post('http://localhost:8080/note/add?title=' + title + '
     // &content=' + content + '&user=lor'+ &color=' + color + '&id='+id , '').
 
-    this.http.post('http://localhost:8080/note/add?title=' + title + '&content=' + content + '&user=lor', '').
+    this.http.post('http://localhost:8080/note/add?title=' + title + '&content=' + content + '&user=lor' + '&color=' + color, '').
     subscribe(response => console.log(response));
   }
 
-  deleteNote(note): void {
+  deleteNote(id): void {
 
     // Get the index in the array of the note that was passed in
-    const index = this.notes.indexOf(note);
-    console.log(index) ;
 
-    this.http.delete('http://localhost:8080/note?id=' + (index + 1)).subscribe(response => console.log(response));
+    console.log(id) ;
+
+    this.http.delete('http://localhost:8080/note?id=' + (id)).subscribe(response => console.log(response));
   /*  {
       console.log(data);
       this.result = data;
@@ -143,13 +155,11 @@ getAllNote(): Observable<Note[]> {
     });*/
 // localhost:8080/note?id=2
     // Delete that element of the array and resave the data
-    if (index > -1) { }{
-      this.notes.splice(index, 1);
 
-      this.save();
+    this.save();
  }
 
-  }
+
 
 }
 // prova2
