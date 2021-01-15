@@ -15,7 +15,7 @@ import {not} from 'rxjs/internal-compatibility';
 export class NotesService {
 
   public notes: Note[] = [];
-  public nuut : Note;
+  public nuut: Note;
   public loaded = false;
 
 
@@ -78,6 +78,7 @@ export class NotesService {
   save(): void {
     // Save the current array of notes to storage
     this.storage.set('notes', this.notes);
+    this.load();
   }
 
 getAllNote(): Observable < Note[] > {

@@ -20,33 +20,9 @@ ngOnInit(){
 // funzione chiamata dal pulsante "salva"
 addNote(){
   this.notesService.createNote(this.title, this.content, this.color);
+  this.notesService.load();
   this.navCtrl.back();
-/*
-  this.alertCtrl.create({
-    header: 'nuova nota',
-    message: 'Inserisci un titolo',
-    inputs: [
-      {
-        type: 'text',
-        name: 'title'
-      }
-    ],
-    buttons: [
-      {
-        text: 'elimina'
-      },
-      {
-        text: 'salva',
-        handler: (data) => {
-          this.notesService.createNote(data.title);
 
-        }
-      }
-    ]
-  }).then((alert) => {
-    alert.present();
-  });
-*/
 }
 
 goToLogin(){
