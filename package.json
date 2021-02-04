@@ -82,7 +82,6 @@
       "browser",
       "android"
     ]
-      "cordova-plugin-local-notification": {}
+
     }
   }
-}
