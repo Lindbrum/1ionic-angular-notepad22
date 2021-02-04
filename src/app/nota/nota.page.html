@@ -30,5 +30,26 @@
   </div>
   <div class="outer">
   <ion-button color="dark" (click)="addNote()">Salva &nbsp;<ion-icon name="save-outline"></ion-icon></ion-button>
+    <ion-button expand="full" color="light" (click)="addControl()">Aggiungi Elenco</ion-button>
+
   </div>
+</ion-content>
+
+
+
+
+
+
+
+<ion-content padding>
+
+  <ion-list lines="none">
+    <form [formGroup]="myForm">
+      <ion-item *ngFor="let control of myForm.controls | keyvalue">
+        <ion-input required type="text" [(ngModel)]="gesf" [formControlName]="control.key" placeHolder="Elenco ..."></ion-input>
+        <ion-icon (click)="removeControl(control)" name="close-circle"></ion-icon>
+      </ion-item>
+    </form>
+  </ion-list>
+
 </ion-content>
