@@ -14,3 +14,4 @@ platforms/ios/cordova/build
 package-lock.json
 package-lock.json
 /www/
+/platforms/
