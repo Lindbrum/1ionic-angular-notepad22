@@ -319,378 +319,212 @@ ModalPageModule = Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"])([
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./ion-action-sheet-ios.entry.js": [
-		"bnjm",
+	"./ion-action-sheet.entry.js": [
+		"dUtr",
 		"common",
 		0
 	],
-	"./ion-action-sheet-md.entry.js": [
-		"utt2",
+	"./ion-alert.entry.js": [
+		"Q8AI",
 		"common",
 		1
 	],
-	"./ion-alert-ios.entry.js": [
-		"yaSn",
+	"./ion-app_8.entry.js": [
+		"hgI1",
 		"common",
 		2
 	],
-	"./ion-alert-md.entry.js": [
-		"2/RY",
+	"./ion-avatar_3.entry.js": [
+		"CfoV",
 		"common",
 		3
 	],
-	"./ion-app_8-ios.entry.js": [
-		"iInF",
+	"./ion-back-button.entry.js": [
+		"Nt02",
 		"common",
 		4
 	],
-	"./ion-app_8-md.entry.js": [
-		"K9Nc",
-		"common",
+	"./ion-backdrop.entry.js": [
+		"Q2Bp",
 		5
 	],
-	"./ion-avatar_3-ios.entry.js": [
-		"hH1s",
+	"./ion-button_2.entry.js": [
+		"0Pbj",
 		"common",
 		6
 	],
-	"./ion-avatar_3-md.entry.js": [
-		"Jw9y",
+	"./ion-card_5.entry.js": [
+		"ydQj",
 		"common",
 		7
 	],
-	"./ion-back-button-ios.entry.js": [
-		"ouVF",
+	"./ion-checkbox.entry.js": [
+		"4fMi",
 		"common",
 		8
 	],
-	"./ion-back-button-md.entry.js": [
-		"/joy",
+	"./ion-chip.entry.js": [
+		"czK9",
 		"common",
 		9
 	],
-	"./ion-backdrop-ios.entry.js": [
-		"uJLv",
+	"./ion-col_3.entry.js": [
+		"/CAe",
 		10
 	],
-	"./ion-backdrop-md.entry.js": [
-		"fSmE",
+	"./ion-datetime_3.entry.js": [
+		"WgF3",
+		"common",
 		11
 	],
-	"./ion-button_2-ios.entry.js": [
-		"s1jK",
+	"./ion-fab_3.entry.js": [
+		"uQcF",
 		"common",
 		12
 	],
-	"./ion-button_2-md.entry.js": [
-		"Wou7",
-		"common",
+	"./ion-img.entry.js": [
+		"wHD8",
 		13
 	],
-	"./ion-card_5-ios.entry.js": [
-		"qshq",
-		"common",
+	"./ion-infinite-scroll_2.entry.js": [
+		"2lz6",
 		14
 	],
-	"./ion-card_5-md.entry.js": [
-		"Q1uX",
+	"./ion-input.entry.js": [
+		"ercB",
 		"common",
 		15
 	],
-	"./ion-checkbox-ios.entry.js": [
-		"059i",
+	"./ion-item-option_3.entry.js": [
+		"MGMP",
 		"common",
 		16
 	],
-	"./ion-checkbox-md.entry.js": [
-		"eLfv",
+	"./ion-item_8.entry.js": [
+		"9bur",
 		"common",
 		17
 	],
-	"./ion-chip-ios.entry.js": [
-		"+FzG",
+	"./ion-loading.entry.js": [
+		"cABk",
 		"common",
 		18
 	],
-	"./ion-chip-md.entry.js": [
-		"yRpg",
+	"./ion-menu_3.entry.js": [
+		"kyFE",
 		"common",
 		19
 	],
-	"./ion-col_3.entry.js": [
-		"/CAe",
+	"./ion-modal.entry.js": [
+		"TvZU",
+		"common",
 		20
-	],
-	"./ion-datetime_3-ios.entry.js": [
-		"Z1Jy",
-		"common",
-		21
-	],
-	"./ion-datetime_3-md.entry.js": [
-		"X0Dk",
-		"common",
-		22
-	],
-	"./ion-fab_3-ios.entry.js": [
-		"wvyA",
-		"common",
-		23
-	],
-	"./ion-fab_3-md.entry.js": [
-		"NkKY",
-		"common",
-		24
-	],
-	"./ion-img.entry.js": [
-		"wHD8",
-		25
-	],
-	"./ion-infinite-scroll_2-ios.entry.js": [
-		"nf6t",
-		26
-	],
-	"./ion-infinite-scroll_2-md.entry.js": [
-		"lg/V",
-		27
-	],
-	"./ion-input-ios.entry.js": [
-		"sdJS",
-		"common",
-		28
-	],
-	"./ion-input-md.entry.js": [
-		"uQUw",
-		"common",
-		29
-	],
-	"./ion-item-option_3-ios.entry.js": [
-		"Pa1g",
-		"common",
-		30
-	],
-	"./ion-item-option_3-md.entry.js": [
-		"KTnd",
-		"common",
-		31
-	],
-	"./ion-item_8-ios.entry.js": [
-		"Z51p",
-		"common",
-		32
-	],
-	"./ion-item_8-md.entry.js": [
-		"8bam",
-		"common",
-		33
-	],
-	"./ion-loading-ios.entry.js": [
-		"J3Yu",
-		"common",
-		34
-	],
-	"./ion-loading-md.entry.js": [
-		"N3W9",
-		"common",
-		35
-	],
-	"./ion-menu_3-ios.entry.js": [
-		"IlGI",
-		"common",
-		36
-	],
-	"./ion-menu_3-md.entry.js": [
-		"WHty",
-		"common",
-		37
-	],
-	"./ion-modal-ios.entry.js": [
-		"mgaC",
-		"common",
-		38
-	],
-	"./ion-modal-md.entry.js": [
-		"EpFf",
-		"common",
-		39
 	],
 	"./ion-nav_2.entry.js": [
 		"vnES",
 		"common",
-		40
+		21
 	],
-	"./ion-popover-ios.entry.js": [
-		"Gdks",
+	"./ion-popover.entry.js": [
+		"qCuA",
 		"common",
-		41
+		22
 	],
-	"./ion-popover-md.entry.js": [
-		"VgKV",
+	"./ion-progress-bar.entry.js": [
+		"0tOe",
 		"common",
-		42
+		23
 	],
-	"./ion-progress-bar-ios.entry.js": [
-		"0PGG",
+	"./ion-radio_2.entry.js": [
+		"h11V",
 		"common",
-		43
+		24
 	],
-	"./ion-progress-bar-md.entry.js": [
-		"h/Bu",
+	"./ion-range.entry.js": [
+		"XGij",
 		"common",
-		44
+		25
 	],
-	"./ion-radio_2-ios.entry.js": [
-		"5bK7",
+	"./ion-refresher_2.entry.js": [
+		"nYbb",
 		"common",
-		45
+		26
 	],
-	"./ion-radio_2-md.entry.js": [
-		"pOmE",
+	"./ion-reorder_2.entry.js": [
+		"smMY",
 		"common",
-		46
-	],
-	"./ion-range-ios.entry.js": [
-		"5g9+",
-		"common",
-		47
-	],
-	"./ion-range-md.entry.js": [
-		"fD4w",
-		"common",
-		48
-	],
-	"./ion-refresher_2-ios.entry.js": [
-		"CXux",
-		"common",
-		49
-	],
-	"./ion-refresher_2-md.entry.js": [
-		"RODS",
-		"common",
-		50
-	],
-	"./ion-reorder_2-ios.entry.js": [
-		"IdzL",
-		"common",
-		51
-	],
-	"./ion-reorder_2-md.entry.js": [
-		"Ftzj",
-		"common",
-		52
+		27
 	],
 	"./ion-ripple-effect.entry.js": [
 		"STjf",
-		53
+		28
 	],
 	"./ion-route_4.entry.js": [
 		"k5eQ",
 		"common",
-		54
+		29
 	],
-	"./ion-searchbar-ios.entry.js": [
-		"l0q3",
+	"./ion-searchbar.entry.js": [
+		"OR5t",
 		"common",
-		55
+		30
 	],
-	"./ion-searchbar-md.entry.js": [
-		"mLlG",
+	"./ion-segment_2.entry.js": [
+		"fSgp",
 		"common",
-		56
+		31
 	],
-	"./ion-segment_2-ios.entry.js": [
-		"Iymp",
+	"./ion-select_3.entry.js": [
+		"lfGF",
 		"common",
-		57
+		32
 	],
-	"./ion-segment_2-md.entry.js": [
-		"3msy",
-		"common",
-		58
-	],
-	"./ion-select_3-ios.entry.js": [
-		"rYLK",
-		"common",
-		59
-	],
-	"./ion-select_3-md.entry.js": [
-		"WOXB",
-		"common",
-		60
-	],
-	"./ion-slide_2-ios.entry.js": [
-		"F/Xn",
-		61
-	],
-	"./ion-slide_2-md.entry.js": [
-		"k8us",
-		62
+	"./ion-slide_2.entry.js": [
+		"5xYT",
+		33
 	],
 	"./ion-spinner.entry.js": [
 		"nI0H",
 		"common",
-		63
+		34
 	],
-	"./ion-split-pane-ios.entry.js": [
-		"edcM",
-		64
+	"./ion-split-pane.entry.js": [
+		"NAQR",
+		35
 	],
-	"./ion-split-pane-md.entry.js": [
-		"RyPD",
-		65
-	],
-	"./ion-tab-bar_2-ios.entry.js": [
-		"DP4G",
+	"./ion-tab-bar_2.entry.js": [
+		"knkW",
 		"common",
-		66
-	],
-	"./ion-tab-bar_2-md.entry.js": [
-		"gaXT",
-		"common",
-		67
+		36
 	],
 	"./ion-tab_2.entry.js": [
 		"TpdJ",
 		"common",
-		68
+		37
 	],
 	"./ion-text.entry.js": [
 		"ISmu",
 		"common",
-		69
+		38
 	],
-	"./ion-textarea-ios.entry.js": [
-		"xNZy",
+	"./ion-textarea.entry.js": [
+		"U7LX",
 		"common",
-		70
+		39
 	],
-	"./ion-textarea-md.entry.js": [
-		"p1XJ",
+	"./ion-toast.entry.js": [
+		"L3sA",
 		"common",
-		71
+		40
 	],
-	"./ion-toast-ios.entry.js": [
-		"XGfm",
+	"./ion-toggle.entry.js": [
+		"IUOf",
 		"common",
-		72
-	],
-	"./ion-toast-md.entry.js": [
-		"Y/uG",
-		"common",
-		73
-	],
-	"./ion-toggle-ios.entry.js": [
-		"WbT0",
-		"common",
-		74
-	],
-	"./ion-toggle-md.entry.js": [
-		"upP9",
-		"common",
-		75
+		41
 	],
 	"./ion-virtual-scroll.entry.js": [
 		"8Mb5",
-		76
+		42
 	]
 };
 function webpackAsyncContext(req) {
