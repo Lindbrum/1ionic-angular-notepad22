@@ -25,137 +25,146 @@
 
   (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["common"], {
     /***/
-    "0/6H":
-    /*!*********************************************************************!*\
-      !*** ./node_modules/@ionic/core/dist/esm/button-active-a6787d69.js ***!
-      \*********************************************************************/
+    "6i10":
+    /*!***********************************************************************!*\
+      !*** ./node_modules/@ionic/core/dist/esm/spinner-configs-c78e170e.js ***!
+      \***********************************************************************/
 
-    /*! exports provided: c */
+    /*! exports provided: S */
 
     /***/
-    function H(module, __webpack_exports__, __webpack_require__) {
+    function i10(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
       /* harmony export (binding) */
 
 
-      __webpack_require__.d(__webpack_exports__, "c", function () {
-        return createButtonActiveGesture;
+      __webpack_require__.d(__webpack_exports__, "S", function () {
+        return SPINNERS;
       });
-      /* harmony import */
 
-
-      var _index_e806d1f6_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-      /*! ./index-e806d1f6.js */
-      "A36C");
-      /* harmony import */
-
-
-      var _index_f49d994d_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
-      /*! ./index-f49d994d.js */
-      "iWo5");
-      /* harmony import */
-
-
-      var _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! ./haptic-27b3f981.js */
-      "qULd");
-
-      var createButtonActiveGesture = function createButtonActiveGesture(el, isButton) {
-        var currentTouchedButton;
-        var initialTouchedButton;
-
-        var activateButtonAtPoint = function activateButtonAtPoint(x, y, hapticFeedbackFn) {
-          if (typeof document === 'undefined') {
-            return;
+      var spinners = {
+        'bubbles': {
+          dur: 1000,
+          circles: 9,
+          fn: function fn(dur, index, total) {
+            var animationDelay = "".concat(dur * index / total - dur, "ms");
+            var angle = 2 * Math.PI * index / total;
+            return {
+              r: 5,
+              style: {
+                'top': "".concat(9 * Math.sin(angle), "px"),
+                'left': "".concat(9 * Math.cos(angle), "px"),
+                'animation-delay': animationDelay
+              }
+            };
           }
-
-          var target = document.elementFromPoint(x, y);
-
-          if (!target || !isButton(target)) {
-            clearActiveButton();
-            return;
+        },
+        'circles': {
+          dur: 1000,
+          circles: 8,
+          fn: function fn(dur, index, total) {
+            var step = index / total;
+            var animationDelay = "".concat(dur * step - dur, "ms");
+            var angle = 2 * Math.PI * step;
+            return {
+              r: 5,
+              style: {
+                'top': "".concat(9 * Math.sin(angle), "px"),
+                'left': "".concat(9 * Math.cos(angle), "px"),
+                'animation-delay': animationDelay
+              }
+            };
           }
-
-          if (target !== currentTouchedButton) {
-            clearActiveButton();
-            setActiveButton(target, hapticFeedbackFn);
+        },
+        'circular': {
+          dur: 1400,
+          elmDuration: true,
+          circles: 1,
+          fn: function fn() {
+            return {
+              r: 20,
+              cx: 48,
+              cy: 48,
+              fill: 'none',
+              viewBox: '24 24 48 48',
+              transform: 'translate(0,0)',
+              style: {}
+            };
           }
-        };
-
-        var setActiveButton = function setActiveButton(button, hapticFeedbackFn) {
-          currentTouchedButton = button;
-
-          if (!initialTouchedButton) {
-            initialTouchedButton = currentTouchedButton;
+        },
+        'crescent': {
+          dur: 750,
+          circles: 1,
+          fn: function fn() {
+            return {
+              r: 26,
+              style: {}
+            };
           }
-
-          var buttonToModify = currentTouchedButton;
-          Object(_index_e806d1f6_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
-            return buttonToModify.classList.add('ion-activated');
-          });
-          hapticFeedbackFn();
-        };
-
-        var clearActiveButton = function clearActiveButton() {
-          var dispatchClick = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-
-          if (!currentTouchedButton) {
-            return;
+        },
+        'dots': {
+          dur: 750,
+          circles: 3,
+          fn: function fn(_, index) {
+            var animationDelay = -(110 * index) + 'ms';
+            return {
+              r: 6,
+              style: {
+                'left': "".concat(9 - 9 * index, "px"),
+                'animation-delay': animationDelay
+              }
+            };
           }
-
-          var buttonToModify = currentTouchedButton;
-          Object(_index_e806d1f6_js__WEBPACK_IMPORTED_MODULE_0__["c"])(function () {
-            return buttonToModify.classList.remove('ion-activated');
-          });
-          /**
-           * Clicking on one button, but releasing on another button
-           * does not dispatch a click event in browsers, so we
-           * need to do it manually here. Some browsers will
-           * dispatch a click if clicking on one button, dragging over
-           * another button, and releasing on the original button. In that
-           * case, we need to make sure we do not cause a double click there.
-           */
-
-          if (dispatchClick && initialTouchedButton !== currentTouchedButton) {
-            currentTouchedButton.click();
+        },
+        'lines': {
+          dur: 1000,
+          lines: 12,
+          fn: function fn(dur, index, total) {
+            var transform = "rotate(".concat(30 * index + (index < 6 ? 180 : -180), "deg)");
+            var animationDelay = "".concat(dur * index / total - dur, "ms");
+            return {
+              y1: 17,
+              y2: 29,
+              style: {
+                'transform': transform,
+                'animation-delay': animationDelay
+              }
+            };
           }
-
-          currentTouchedButton = undefined;
-        };
-
-        return Object(_index_f49d994d_js__WEBPACK_IMPORTED_MODULE_1__["createGesture"])({
-          el: el,
-          gestureName: 'buttonActiveDrag',
-          threshold: 0,
-          onStart: function onStart(ev) {
-            return activateButtonAtPoint(ev.currentX, ev.currentY, _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_2__["a"]);
-          },
-          onMove: function onMove(ev) {
-            return activateButtonAtPoint(ev.currentX, ev.currentY, _haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_2__["b"]);
-          },
-          onEnd: function onEnd() {
-            clearActiveButton(true);
-            Object(_haptic_27b3f981_js__WEBPACK_IMPORTED_MODULE_2__["h"])();
-            initialTouchedButton = undefined;
+        },
+        'lines-small': {
+          dur: 1000,
+          lines: 12,
+          fn: function fn(dur, index, total) {
+            var transform = "rotate(".concat(30 * index + (index < 6 ? 180 : -180), "deg)");
+            var animationDelay = "".concat(dur * index / total - dur, "ms");
+            return {
+              y1: 12,
+              y2: 20,
+              style: {
+                'transform': transform,
+                'animation-delay': animationDelay
+              }
+            };
           }
-        });
+        }
       };
+      var SPINNERS = spinners;
       /***/
-
     },
 
     /***/
-    "74mu":
+    "KwJk":
     /*!*************************************************************!*\
-      !*** ./node_modules/@ionic/core/dist/esm/theme-ff3fc52f.js ***!
+      !*** ./node_modules/@ionic/core/dist/esm/theme-c2dc54d9.js ***!
       \*************************************************************/
 
     /*! exports provided: c, g, h, o */
 
     /***/
-    function mu(module, __webpack_exports__, __webpack_require__) {
+    function KwJk(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -192,10 +201,10 @@
        */
 
 
-      var createColorClasses = function createColorClasses(color, cssClassMap) {
-        return typeof color === 'string' && color.length > 0 ? Object.assign(_defineProperty({
+      var createColorClasses = function createColorClasses(color) {
+        return typeof color === 'string' && color.length > 0 ? _defineProperty({
           'ion-color': true
-        }, "ion-color-".concat(color), true), cssClassMap) : cssClassMap;
+        }, "ion-color-".concat(color), true) : undefined;
       };
 
       var getClassList = function getClassList(classes) {
@@ -224,7 +233,7 @@
       var SCHEME = /^[a-z][a-z0-9+\-.]*:/;
 
       var openURL = /*#__PURE__*/function () {
-        var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(url, ev, direction, animation) {
+        var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(url, ev, direction) {
           var router;
           return regeneratorRuntime.wrap(function _callee$(_context) {
             while (1) {
@@ -246,7 +255,7 @@
                     ev.preventDefault();
                   }
 
-                  return _context.abrupt("return", router.push(url, direction, animation));
+                  return _context.abrupt("return", router.push(url, direction));
 
                 case 5:
                   return _context.abrupt("return", false);
@@ -259,8 +268,8 @@
           }, _callee);
         }));
 
-        return function openURL(_x, _x2, _x3, _x4) {
-          return _ref.apply(this, arguments);
+        return function openURL(_x, _x2, _x3) {
+          return _ref2.apply(this, arguments);
         };
       }();
       /***/
@@ -268,15 +277,15 @@
     },
 
     /***/
-    "ZaV5":
+    "NqGI":
     /*!**************************************************************************!*\
-      !*** ./node_modules/@ionic/core/dist/esm/framework-delegate-4584ab5a.js ***!
+      !*** ./node_modules/@ionic/core/dist/esm/framework-delegate-d1eb6504.js ***!
       \**************************************************************************/
 
     /*! exports provided: a, d */
 
     /***/
-    function ZaV5(module, __webpack_exports__, __webpack_require__) {
+    function NqGI(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -294,7 +303,7 @@
       });
 
       var attachComponent = /*#__PURE__*/function () {
-        var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(delegate, container, component, cssClasses, componentProps) {
+        var _ref3 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(delegate, container, component, cssClasses, componentProps) {
           var el;
           return regeneratorRuntime.wrap(function _callee2$(_context2) {
             while (1) {
@@ -349,8 +358,8 @@
           }, _callee2);
         }));
 
-        return function attachComponent(_x5, _x6, _x7, _x8, _x9) {
-          return _ref2.apply(this, arguments);
+        return function attachComponent(_x4, _x5, _x6, _x7, _x8) {
+          return _ref3.apply(this, arguments);
         };
       }();
 
@@ -584,146 +593,15 @@
     },
 
     /***/
-    "h3R7":
-    /*!***********************************************************************!*\
-      !*** ./node_modules/@ionic/core/dist/esm/spinner-configs-cd7845af.js ***!
-      \***********************************************************************/
-
-    /*! exports provided: S */
-
-    /***/
-    function h3R7(module, __webpack_exports__, __webpack_require__) {
-      "use strict";
-
-      __webpack_require__.r(__webpack_exports__);
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "S", function () {
-        return SPINNERS;
-      });
-
-      var spinners = {
-        'bubbles': {
-          dur: 1000,
-          circles: 9,
-          fn: function fn(dur, index, total) {
-            var animationDelay = "".concat(dur * index / total - dur, "ms");
-            var angle = 2 * Math.PI * index / total;
-            return {
-              r: 5,
-              style: {
-                'top': "".concat(9 * Math.sin(angle), "px"),
-                'left': "".concat(9 * Math.cos(angle), "px"),
-                'animation-delay': animationDelay
-              }
-            };
-          }
-        },
-        'circles': {
-          dur: 1000,
-          circles: 8,
-          fn: function fn(dur, index, total) {
-            var step = index / total;
-            var animationDelay = "".concat(dur * step - dur, "ms");
-            var angle = 2 * Math.PI * step;
-            return {
-              r: 5,
-              style: {
-                'top': "".concat(9 * Math.sin(angle), "px"),
-                'left': "".concat(9 * Math.cos(angle), "px"),
-                'animation-delay': animationDelay
-              }
-            };
-          }
-        },
-        'circular': {
-          dur: 1400,
-          elmDuration: true,
-          circles: 1,
-          fn: function fn() {
-            return {
-              r: 20,
-              cx: 48,
-              cy: 48,
-              fill: 'none',
-              viewBox: '24 24 48 48',
-              transform: 'translate(0,0)',
-              style: {}
-            };
-          }
-        },
-        'crescent': {
-          dur: 750,
-          circles: 1,
-          fn: function fn() {
-            return {
-              r: 26,
-              style: {}
-            };
-          }
-        },
-        'dots': {
-          dur: 750,
-          circles: 3,
-          fn: function fn(_, index) {
-            var animationDelay = -(110 * index) + 'ms';
-            return {
-              r: 6,
-              style: {
-                'left': "".concat(9 - 9 * index, "px"),
-                'animation-delay': animationDelay
-              }
-            };
-          }
-        },
-        'lines': {
-          dur: 1000,
-          lines: 12,
-          fn: function fn(dur, index, total) {
-            var transform = "rotate(".concat(30 * index + (index < 6 ? 180 : -180), "deg)");
-            var animationDelay = "".concat(dur * index / total - dur, "ms");
-            return {
-              y1: 17,
-              y2: 29,
-              style: {
-                'transform': transform,
-                'animation-delay': animationDelay
-              }
-            };
-          }
-        },
-        'lines-small': {
-          dur: 1000,
-          lines: 12,
-          fn: function fn(dur, index, total) {
-            var transform = "rotate(".concat(30 * index + (index < 6 ? 180 : -180), "deg)");
-            var animationDelay = "".concat(dur * index / total - dur, "ms");
-            return {
-              y1: 12,
-              y2: 20,
-              style: {
-                'transform': transform,
-                'animation-delay': animationDelay
-              }
-            };
-          }
-        }
-      };
-      var SPINNERS = spinners;
-      /***/
-    },
-
-    /***/
-    "qULd":
+    "xgmX":
     /*!**************************************************************!*\
-      !*** ./node_modules/@ionic/core/dist/esm/haptic-27b3f981.js ***!
+      !*** ./node_modules/@ionic/core/dist/esm/haptic-da73c8fd.js ***!
       \**************************************************************/
 
     /*! exports provided: a, b, c, d, h */
 
     /***/
-    function qULd(module, __webpack_exports__, __webpack_require__) {
+    function xgmX(module, __webpack_exports__, __webpack_require__) {
       "use strict";
 
       __webpack_require__.r(__webpack_exports__);
@@ -731,31 +609,31 @@
 
 
       __webpack_require__.d(__webpack_exports__, "a", function () {
-        return hapticSelectionStart;
-      });
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "b", function () {
-        return hapticSelectionChanged;
-      });
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "c", function () {
-        return hapticSelection;
-      });
-      /* harmony export (binding) */
-
-
-      __webpack_require__.d(__webpack_exports__, "d", function () {
         return hapticImpact;
       });
       /* harmony export (binding) */
 
 
-      __webpack_require__.d(__webpack_exports__, "h", function () {
+      __webpack_require__.d(__webpack_exports__, "b", function () {
+        return hapticSelectionStart;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "c", function () {
+        return hapticSelectionChanged;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "d", function () {
         return hapticSelectionEnd;
+      });
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "h", function () {
+        return hapticSelection;
       });
 
       var HapticEngine = {
@@ -836,9 +714,9 @@
           }
 
           if (this.isCapacitor()) {
-            engine.selectionEnd();
+            engine.selectionChanged();
           } else {
-            engine.gestureSelectionEnd();
+            engine.gestureSelectionChanged();
           }
         }
       };
