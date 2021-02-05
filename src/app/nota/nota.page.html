@@ -5,11 +5,11 @@
     </ion-buttons>
     <ion-title class="titolo" >Nuova nota</ion-title>
 
-
+    <!-- Menù Colori note -->
     <ion-radio-group [(ngModel)]="color"  slot="end"    (ionChange)="color">
-      <ion-radio color="success" value="success"></ion-radio> &nbsp;
-      <ion-radio color="danger" value="danger"></ion-radio> &nbsp;
-      <ion-radio color="tertiary" value="tertiary"></ion-radio> &nbsp;
+      <ion-radio color="success" value="success"></ion-radio>
+      <ion-radio color="danger" value="danger"></ion-radio>
+      <ion-radio color="tertiary" value="tertiary"></ion-radio>
       <ion-radio  color="warning" value="warning" ></ion-radio>
     </ion-radio-group>
   </ion-toolbar>
@@ -17,7 +17,8 @@
 
 <ion-content color="primary">
   <ion-item>
-    <ion-input [(ngModel)]="title" placeholder="Titolo" class="titolo"></ion-input>
+
+    <ion-input [(ngModel)]="title" placeholder="Titolo" class="titolo"> </ion-input>
 
   </ion-item>
   <!-- Textarea con placeholder -->
@@ -25,33 +26,16 @@
     <ion-textarea [(ngModel)]="content" placeholder="Scrivi qui la tua nota..." class="areaTesto"></ion-textarea>
   </ion-item>
   <div class="outer">
-  <ion-button color="warning" class="inner" (click)="showModal()">Reminder &nbsp;<ion-icon name="notifications-outline"></ion-icon></ion-button>
+    <!-- Bottone Notifiche -->
+  <ion-button color="warning" class="inner" (click)="showModal()"> Reminder &nbsp;<ion-icon name="notifications-outline"></ion-icon></ion-button>
+    <!-- Bottone Link -->
   <ion-button color="medium" class="inner">Link &nbsp;<ion-icon name="share-social-outline"></ion-icon></ion-button>
   </div>
   <div class="outer">
+    <!-- Bottone addNote -->
   <ion-button color="dark" (click)="addNote()">Salva &nbsp;<ion-icon name="save-outline"></ion-icon></ion-button>
-    <ion-button expand="full" color="light" (click)="addControl()">Aggiungi Elenco</ion-button>
-
+    <!-- Bottone Crea elenco -->
+    <ion-button color="light" (click)="showModal2()">Crea Elenco</ion-button>
   </div>
-</ion-content>
-
-
-
-
-
-
-
-<ion-content padding>
-
-  <ion-list lines="none">
-    <form [formGroup]="myForm">
-      <ion-item *ngFor="let control of myForm.controls | keyvalue">
-        <input type = "checkbox">
-        <ion-input required type="text" [(ngModel)]="gesf" [formControlName]="control.key" placeHolder="Elenco ..."></ion-input>
-        <ion-icon (click)="removeControl(control)" name="close-circle"></ion-icon>
-
-      </ion-item>
-    </form>
-  </ion-list>
 
 </ion-content>

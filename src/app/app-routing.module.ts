@@ -12,7 +12,8 @@ const routes: Routes = [
 
   { path: 'notes/:id', loadChildren: './detail/detail.module#DetailPageModule' },
   {
-    path: 'login', loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
   {
     path: 'forgot-password',
@@ -25,10 +26,13 @@ const routes: Routes = [
   {
     path: 'nota',
     loadChildren: () => import('./nota/nota.module').then( m => m.NotaPageModule)
-  },
-  {
+  },  {
     path: 'modal',
     loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
+  },
+  {
+    path: 'modal-check',
+    loadChildren: () => import('./modal-check/modal-check.module').then( m => m.ModalCheckPageModule)
   }
 
 
