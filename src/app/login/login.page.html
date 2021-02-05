@@ -1,30 +1,56 @@
 <ion-header>
-  <ion-toolbar color="primary">
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/notes"></ion-back-button>
-    </ion-buttons>
-    <ion-title class="titolo">Login</ion-title>
+  <ion-toolbar>
+    <ion-item lines="none">
+
+      <ion-icon name="arrow-back-outline" class="ion-float-left" color="light" (click)="goToDash()"></ion-icon>
+
+      <ion-title color="light" class="ion-text-center">Login</ion-title>
+    </ion-item>
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="primary">
-  <form>
-    <ion-item lines="full">
-      <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
-    </ion-item>
+<ion-content fullscreen="true">
 
-    <ion-item lines="full">
-      <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required></ion-input>
-    </ion-item>
+  <!-- Logo-->
+  <div>
+    <div class="logo"></div>
+  </div>
 
-    <ion-row>
-      <ion-col>
-        <ion-button type="submit" color="danger" expand="block">Entra</ion-button>
-        <ion-button type="submit" color="primary" expand="block" [routerLink]="['/registration']" color="dark">Registrati</ion-button>
-        <a [routerLink]="['/forgot-password']" class="small-text">Password dimenticata?</a>
-      </ion-col>
-    </ion-row>
+  <!-- Login form -->
+  <form [formGroup]="loginFormModel" class="list-form">
+    <ion-item>
+      <ion-label class="ion-text-start">{{ 'USERNAME' }}</ion-label>
+      <ion-input color="secondary" type="email" formControlName="username"></ion-input>
+    </ion-item>
+    <p ion-text class="text08" *ngIf="loginFormModel.get('username').touched && loginFormModel.get('username').invalid">
+        <ion-text color="success" class="ion-margin-start"> {{ 'USERNAME REQUIRED'  }} </ion-text>
+    </p>
+    <ion-item>
+      <ion-label class="ion-text-start">{{ 'PASSWORD' }}</ion-label>
+      <ion-input color="secondary" type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <p ion-text class="text08" *ngIf="loginFormModel.get('password').touched && loginFormModel.get('password').invalid">
+      <ion-text color="success" class="ion-margin-start">{{ 'PASSWORD REQUIRED'  }}</ion-text>
+    </p>
+    <div margin-top="20px">
+      <ion-button size="medium" expand="block" class="ion-margin-start ion-margin-end" color="primary" [disabled]="!loginFormModel.valid" tappable="true" (click)="login()">
+        {{ 'LOGIN BUTTON' }}
+      </ion-button>
+    </div>
   </form>
+
+  <br>
+
+  <div>
+    <!-- bottone Registrati -->
+    <ion-button size="medium" expand="block" color="primary" class="ion-margin-start ion-margin-end" (click)="goToSignIn()">
+      {{ 'SIGN-IN'}}
+    </ion-button>
+    <p class="ion-text-wrap"></p>
+    <!-- bottone Recupera Password -->
+    <ion-button size="medium" expand="block" color="primary" class="ion-margin-start ion-margin-end" (click)="goToPasswordRecovery()">
+      {{ 'PASSWORD RECOVERY'}}
+    </ion-button>
+  </div>
+
 </ion-content>

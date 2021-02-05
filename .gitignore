@@ -1,17 +1,8 @@
 # Project exclude paths
 /node_modules/
-.idea/workspace.xml
-package-lock.json
-package-lock.json
-platforms/ios/cordova/Api.js
-platforms/ios/cordova/apple_ios_version
-platforms/ios/cordova/apple_osx_version
-platforms/ios/cordova/apple_xcode_version
-platforms/ios/cordova/build
-*.xcconfig
 /platforms/
 /plugins/
 package-lock.json
-package-lock.json
+
 /www/
 /platforms/
