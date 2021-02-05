@@ -29,6 +29,10 @@ const routes: Routes = [
   },  {
     path: 'modal',
     loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
+  },
+  {
+    path: 'modal-check',
+    loadChildren: () => import('./modal-check/modal-check.module').then( m => m.ModalCheckPageModule)
   }
 
 
