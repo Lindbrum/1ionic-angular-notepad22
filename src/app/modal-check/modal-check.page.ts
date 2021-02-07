@@ -30,9 +30,9 @@ export class ModalCheckPage implements OnInit {
 */
 ngOnInit() {
   }
-/*
+
   salvaDati(){
-    this.storage.set('nota', this.elenco);
+    this.storage.set('elenco', this.elenco);
     console.log(this.elenco);
   }
 /*
