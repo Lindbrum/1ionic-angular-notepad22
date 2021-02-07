@@ -5,31 +5,17 @@
 </ion-header>
 
 <!-- Bottone Aggiungi Elenco -->
-<ion-button expand="full" color="dark" (click)="addControl()">Aggiungi</ion-button>
+<ion-button expand="full" color="dark" (click)="addControl()">Aggiungi/Salva</ion-button>
 
 <!-- TextArea con check -->
-<ion-content>
-          <!--
-              <ion-list lines="none">
-                <form [formGroup]="myForm">
-                  <ion-item *ngFor="let control of myForm.controls | keyvalue">
-
-                    <input type = "checkbox">
-                    <ion-input required type="text" [ngModel]="" [formControlName]="control.key" placeHolder="Elenco ..."></ion-input>
-                    <ion-icon (click)="removeControl(control)" name="close-circle"></ion-icon>
-
-                  </ion-item>
-                </form>
-              </ion-list>
-              -->
-<form>
-<ion-input type="string" *ngFor="let elenco of elenco; let i = index" ngModel="elenco(i)" placeholder="scrivi qui...">
-    <ion-checkbox checked="false"></ion-checkbox>
- {{elenco}}
-</ion-input>
-</form>
-
-  <ion-button (click)="salvaDati()">OK</ion-button>
-  <ion-button (click)="close()" fill="clear">chiudi</ion-button>
-
+<ion-content padding>
+<ion-list lines="none">
+  <form [formGroup]="myForm">
+    <ion-item *ngFor="let control of myForm.controls | keyvalue">
+      <input type = "checkbox">
+      <ion-input required type="text" [(ngModel)]="gesf[control.key]"  [formControlName]="control.key" placeHolder="Elenco ..."></ion-input>
+      <ion-icon (click)="removeControl(control)" name="close-circle"></ion-icon>
+    </ion-item>
+  </form>
+</ion-list>
 </ion-content>
