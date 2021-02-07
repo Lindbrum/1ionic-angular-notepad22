@@ -59,10 +59,10 @@ export class HomePage implements OnInit {
     console.log('Begin async operation');
     this.notesService.load();
 
+// TimeOut per il Refresh
     setTimeout(() => {
       console.log('Async operation has ended');
       event.target.complete();
-    }, 4000);
+    }, 2000);
   }
-
 }
