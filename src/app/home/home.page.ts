@@ -53,7 +53,6 @@ export class HomePage implements OnInit {
     this.navCtrl.navigateRoot('login');
   }
 
-
 // Metodo per il Refresh
 
   doRefresh(event) {
@@ -63,7 +62,7 @@ export class HomePage implements OnInit {
     setTimeout(() => {
       console.log('Async operation has ended');
       event.target.complete();
-    }, 2000);
+    }, 4000);
   }
 
 }
