@@ -7,6 +7,9 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-advanced-http": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
     "cordova-plugin-ionic-keyboard": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
@@ -31,19 +34,16 @@
     },
     "cordova-plugin-wkwebview-file-xhr": {
       "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-advanced-http": {
-      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
   "dependent_plugins": {
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
     "cordova-plugin-badge": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-file": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   }
