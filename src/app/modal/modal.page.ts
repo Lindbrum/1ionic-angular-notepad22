@@ -11,10 +11,7 @@ export class ModalPage implements OnInit {
 
   constructor(
       private modalCtrl: ModalController, private localNotifications: LocalNotifications, private alertCtrl: AlertController
-  ) { this.localNotifications.on('click').subscribe(res => {
-    const msg = res.data ? res.data.text : '';
-    this.showAlert(res.title, res.text, msg);
-  }); }
+  ) { }
 
   delayed_notification() {
     // Schedule delayed notification
@@ -30,13 +27,14 @@ export class ModalPage implements OnInit {
   ngOnInit() {
   }
 
-  showAlert(header, sub, msg){
-    this.alertCtrl.create({
-      header,
-      subHeader : sub,
-      message : msg,
+  async showAlert(){
+    const alert = await this.alertCtrl.create({
+      header: 'Imposta Alert',
+      subHeader : 'subHeader',
+      message : 'msg',
       buttons : ['OK']
-    }).then(alert => alert.present());
+    });
+    await alert.present();
   }
 
   close(){
