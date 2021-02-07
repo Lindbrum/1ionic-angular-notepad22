@@ -3,6 +3,7 @@ import {NotesService} from '../services/notes.service';
 import {AlertController, ModalController, NavController} from '@ionic/angular';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
+
 @Component({
   selector: 'app-modal-check',
   templateUrl: './modal-check.page.html',
@@ -24,8 +25,11 @@ export class ModalCheckPage implements OnInit {
   color: string;
   public myForm: FormGroup;
   private playerCount = 1;
-  gesf: any;
+  gesf = [];
 
+  array = [];
+
+  //// a=this.playerCount - 2;
   ngOnInit() {
   }
 
@@ -35,7 +39,15 @@ export class ModalCheckPage implements OnInit {
 
   addControl() {
     this.playerCount++;
+
     this.myForm.addControl('player' + this.playerCount, new FormControl('', Validators.required));
-  }
-}
+    // this.gesf.push();
+
+
+
+
+    console.log(this.gesf);
+
+
+}}
 
