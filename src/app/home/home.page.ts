@@ -53,4 +53,17 @@ export class HomePage implements OnInit {
     this.navCtrl.navigateRoot('login');
   }
 
+
+// Metodo per il Refresh
+
+  doRefresh(event) {
+    console.log('Begin async operation');
+    this.notesService.load();
+
+    setTimeout(() => {
+      console.log('Async operation has ended');
+      event.target.complete();
+    }, 2000);
+  }
+
 }
