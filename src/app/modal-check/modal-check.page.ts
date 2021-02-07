@@ -33,6 +33,11 @@ export class ModalCheckPage implements OnInit {
   ngOnInit() {
   }
 
+  // Metodo per chiudere modale
+  close(){
+    this.modalCtrl.dismiss();
+  }
+
   removeControl(control) {
         this.myForm.removeControl(control.key);
       }
@@ -42,9 +47,6 @@ export class ModalCheckPage implements OnInit {
 
     this.myForm.addControl('player' + this.playerCount, new FormControl('', Validators.required));
     // this.gesf.push();
-
-
-
 
     console.log(this.gesf);
 
