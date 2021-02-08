@@ -3,6 +3,7 @@ import {AlertController, ModalController} from '@ionic/angular';
 import {ELocalNotificationTriggerUnit, LocalNotifications} from '@ionic-native/local-notifications/ngx';
 import {Subscription} from 'rxjs';
 import * as moment from 'moment';
+import {Data} from '@angular/router';
 
 @Component({
   selector: 'app-modal',
@@ -19,11 +20,11 @@ export class ModalPage implements OnInit {
   private alertController: any;
   private clickSub: Subscription;
 
+sveglia: any;
 time: string = moment().toISOString();
 
   // Metodo notifica
   scheduleDate = moment(this.time).toDate();
-
   async presentAlert(data) {
     const alert = await this.alertController.create({
       header: 'Alert',
@@ -39,10 +40,11 @@ time: string = moment().toISOString();
   delayedNotif() {
     this.localNotifications.schedule({
       text: 'spero tu abbia aspettato',
-     trigger: { at: new Date(new Date().getTime() + 2000) },
+      trigger: { at: new Date(new Date().getTime() + 2000) },
+     // trigger: { at: new Date(new Date().setTime(this.sveglia))},
       led: 'FF0000',
     });
-    console.log('passato per notifiche');
+    console.log('passato per notifiche' + this.sveglia);
   }
 
   // Chiude Modal notifiche
