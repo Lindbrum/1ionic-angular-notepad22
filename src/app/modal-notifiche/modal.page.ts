@@ -44,7 +44,7 @@ time: any; // string = moment().toISOString();
      // trigger: { at: new Date(new Date().setTime(this.sveglia))},
       led: 'FF0000',
     });
-    console.log('passato per notifiche' + moment(this.time).toISOString() + '------' + this.scheduleDate);
+    console.log('passato per notifiche; la sveglia è [' + moment(this.time).toISOString() + ']------impostata alla DATE  [' + this.scheduleDate);
   }
 
   // Chiude Modal notifiche
