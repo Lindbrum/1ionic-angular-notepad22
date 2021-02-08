@@ -11,18 +11,18 @@
   <form>
     <ion-item lines="full">
       <ion-label position="floating">Email</ion-label>
-      <ion-input type="text" required></ion-input>
+      <ion-input type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}"   ></ion-input>
     </ion-item>
 
     <ion-item lines="full">
       <ion-label position="floating">Password</ion-label>
-      <ion-input type="password" required></ion-input>
+      <ion-input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
 
     <ion-row>
       <ion-col>
         <ion-button
-                type="submit" color="danger" expand="block">Entra
+                type="submit" (click)= loging() color="danger" expand="block">Entra
         </ion-button>
         <ion-button
                 type="submit" color="primary" expand="block" [routerLink]="['/registration']" color="dark">Registrati
@@ -34,6 +34,6 @@
     <ion-button
             color="tertiary" expand="block">sincronizza note
     </ion-button>
-
+                {{allert}}
   </form>
 </ion-content>
