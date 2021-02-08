@@ -5,6 +5,7 @@ import {ModalController} from '@ionic/angular';
 import {ModalPage} from '../modal/modal.page';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ModalCheckPage} from '../modal-check/modal-check.page';
+import {PosixPage} from '../posix/posix.page';
 
 @Component({
     selector: 'app-nota',
@@ -55,6 +56,14 @@ export class NotaPage implements OnInit {
     async showModal2() {
         const modal = await this.modalCtrl.create({
             component: ModalCheckPage
+        }).then(modals => {
+            modals.present();
+        });
+    }
+// Apertura modale geolocalizzazione
+    async showModal3() {
+        const modal = await this.modalCtrl.create({
+            component: PosixPage
         }).then(modals => {
             modals.present();
         });
