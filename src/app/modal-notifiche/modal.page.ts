@@ -12,16 +12,24 @@ import {Data} from '@angular/router';
 })
 
 export class ModalPage implements OnInit {
+  private ddd: any;
+  private alertController: any;
+  private clickSub: Subscription;
+  data: any;
+  time: any; // string = moment().toISOString();
+
+
+
+
+
 
   constructor(
       private modalCtrl: ModalController, private localNotifications: LocalNotifications
   ) { }
 
-  private alertController: any;
-  private clickSub: Subscription;
 
-time: any; // string = moment().toISOString();
-//sl: string = moment(this.time).toISOString();
+
+
   // Metodo notifica
   scheduleDate = moment().toISOString();
   async presentAlert(data) {
@@ -37,17 +45,41 @@ time: any; // string = moment().toISOString();
   }
 
   delayedNotif() {
+
+    // this.ttt = new Date().setDate(moment(this.data).toDate().getDate());
+    // this.ttt.setTime(moment(this.time).toDate().getTime());
+
+    this.ddd =  Date.UTC(moment(this.data).toDate().getUTCFullYear(),
+        moment(this.data).toDate().getUTCMonth(),
+        moment(this.data).toDate().getUTCDate(),
+        moment(this.time).toDate().getUTCHours(),
+        moment(this.time).toDate().getUTCMinutes(),
+        moment(this.time).toDate().getUTCSeconds());
+
+
+
+
     this.localNotifications.schedule({
       text: 'spero tu abbia aspettato',
-      trigger: { at: new Date(moment(this.time).toDate()) },
 
+
+      trigger: { at: new Date(moment(this.ddd).toDate() )},
      // trigger: { at: new Date(new Date().setTime(this.sveglia))},
       led: 'FF0000',
     });
-    console.log('passato per notifiche; la sveglia è [' + moment(this.time).toISOString() + ']------impostata alla DATE  [' + this.scheduleDate);
+    console.log('passato per notifiche; la sveglia è [' +
+
+       moment(this.ddd).toISOString()
+
+
+
+
+        + ']------impostata alla DATE  [' + this.scheduleDate);
   }
 
   // Chiude Modal notifiche
+
+
 
   close(){
     this.modalCtrl.dismiss();
