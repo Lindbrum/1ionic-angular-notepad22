@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
+import {ModalController} from '@ionic/angular';
+import {ModalPage} from '../modal/modal.page';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -18,12 +23,12 @@ export class LoginPage implements OnInit {
 
   ngOnInit() {
     this.allert = 'loggati per sincronizzare le note';
-    this.person = '';
+
   }
 
 
      loging(){
   this.person = this.userService.gettoken(this.username, this.password);
-  if (this.person === ''){}else { this.allert="sei loggato"; }
+  this.allert = JSON.stringify(this.person);
 
 } }

@@ -29,6 +29,7 @@ export class NotesService {
     return of(this.notes); // "of" converte array in uno stream di dati
   }
 */
+  private res: any;
 
   load(): Promise<boolean> {
 
@@ -81,6 +82,19 @@ export class NotesService {
     this.load();
   }
 
+
+  update(t, c,iduser,color): string {
+
+    this.http.put('http://localhost:8080/note/all', {
+      title: t,
+      content: c,
+      idUser: iduser,
+      color: color
+    }).subscribe(response => this.res = JSON.stringify(response));
+
+    return this.res; }
+
+
 getAllNote(): Observable < Note[] > {
   return this.http.get<Note[]>('http://localhost:8080/note/all');
 }
@@ -89,8 +103,7 @@ getAllNote(): Observable < Note[] > {
 
   getNote(id): Observable<Note> {
     // Return the note that has an id matching the id passed in
-    // console.log(this.http.get('http://localhost:8080/note/all'));
-    // tslint:disable-next-line:prefer-const
+
 
     return this.http.get<Note>('http://localhost:8080/note/all/' + id);
     // return this.notes.find(note => note.id === id);
@@ -140,10 +153,10 @@ getAllNote(): Observable < Note[] > {
   deleteNote(id): void {
 
     // Get the index in the array of the note that was passed in
+  //this.notes.splice(id, 1);
+  console.log(id) ;
 
-    console.log(id) ;
-
-    this.http.delete('http://localhost:8080/note?id=' + (id)).subscribe(response => console.log(response));
+  this.http.delete('http://localhost:8080/note?id=' + (id)).subscribe(response => console.log(response));
   /*  {
       console.log(data);
       this.result = data;
@@ -157,7 +170,7 @@ getAllNote(): Observable < Note[] > {
 // localhost:8080/note?id=2
     // Delete that element of the array and resave the data
 
-    this.save();
+  this.save();
  }
 
 
