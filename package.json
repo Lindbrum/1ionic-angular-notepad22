@@ -94,15 +94,17 @@
       "cordova-plugin-wkwebview-engine": {},
       "cordova-plugin-wkwebview-file-xhr": {},
       "cordova-plugin-advanced-http": {},
-      "cordova-plugin-geolocation": {},
+      "cordova-plugin-geolocation": {
+        "GPS_REQUIRED": "true"
+      },
       "cordova-plugin-nativegeocoder": {
         "LOCATION_WHEN_IN_USE_DESCRIPTION": "Use geocoder service"
       }
     },
     "platforms": [
       "browser",
-      "android",
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }
