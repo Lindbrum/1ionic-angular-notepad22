@@ -1,9 +1,61 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>posix</ion-title>
+<ion-header [translucent]="true">
+  <ion-toolbar color="secondary">
+    <ion-title>
+      Posix
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [fullscreen]="true" class="ion-padding">
+
+  <h4>Geolocalizzazione</h4>
+
+  <ion-grid>
+
+    <!-- latitudine -->
+    <ion-row>
+      <ion-col size="4" class="ion-text-center">
+        Latitudine:
+      </ion-col>
+      <ion-col>
+        <ion-badge class="ion-text-wrap" color="medium">{{latitude}}</ion-badge>
+      </ion-col>
+    </ion-row>
+
+    <!-- longitudine -->
+    <ion-row>
+      <ion-col size="4" class="ion-text-center">
+        Longitudine:
+      </ion-col>
+      <ion-col>
+        <ion-badge class="ion-text-wrap" color="medium">{{longitude}}</ion-badge>
+      </ion-col>
+    </ion-row>
+
+    <!-- accuratezza che non va -->
+    <ion-row>
+      <ion-col size="4" class="ion-text-center" color="medium">
+        Accuratezza:
+      </ion-col>
+      <ion-col>
+        <ion-badge class="ion-text-wrap" color="medium">{{accuracy}}</ion-badge>
+      </ion-col>
+    </ion-row>
+
+    <!-- indirizzo -->
+    <ion-row>
+      <ion-col size="4" class="ion-text-center">
+        Indirizzo:
+      </ion-col>
+      <ion-col>
+        <ion-badge class="ion-text-wrap" color="medium">{{address}}</ion-badge>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-button (click)="getGeolocation()" color="success" expand="full">Ottieni posizione</ion-button>
+
+  <ion-button (click)="close()" color="danger" expand="full">Chiudi</ion-button>
 
 </ion-content>
