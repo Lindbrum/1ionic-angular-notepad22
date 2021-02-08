@@ -53,8 +53,8 @@ export class ModalPage implements OnInit {
         moment(this.data).toDate().getUTCMonth(),
         moment(this.data).toDate().getUTCDate(),
         moment(this.time).toDate().getUTCHours(),
-        moment(this.time).toDate().getUTCMinutes(),
-        moment(this.time).toDate().getUTCSeconds());
+        moment(this.time).toDate().getUTCMinutes());
+       // moment(this.time).toDate().getUTCSeconds());
 
 
 
