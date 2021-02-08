@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
 import {ModalController} from '@ionic/angular';
-import {ModalPage} from '../modal/modal.page';
+
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 

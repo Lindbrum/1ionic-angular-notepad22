@@ -20,10 +20,10 @@ export class ModalPage implements OnInit {
   private alertController: any;
   private clickSub: Subscription;
 
-time: string = moment().toISOString();
-
+time: any; // string = moment().toISOString();
+//sl: string = moment(this.time).toISOString();
   // Metodo notifica
-  scheduleDate = moment(this.time).toDate();
+  scheduleDate = moment().toISOString();
   async presentAlert(data) {
     const alert = await this.alertController.create({
       header: 'Alert',
@@ -39,11 +39,12 @@ time: string = moment().toISOString();
   delayedNotif() {
     this.localNotifications.schedule({
       text: 'spero tu abbia aspettato',
-      trigger: { at: new Date(new Date().getTime() + 2000) },
+      trigger: { at: new Date(moment(this.time).toDate()) },
+
      // trigger: { at: new Date(new Date().setTime(this.sveglia))},
       led: 'FF0000',
     });
-    console.log('passato per notifiche' + this.time);
+    console.log('passato per notifiche; la sveglia è [' + moment(this.time).toISOString() + ']------impostata alla DATE  [' + this.scheduleDate);
   }
 
   // Chiude Modal notifiche
