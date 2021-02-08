@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AlertController, ModalController, NavController} from '@ionic/angular';
 import { NotesService } from '../services/notes.service';
-import {ModalPage} from '../modal/modal.page';
 import {ModalCheckViewPage} from '../modal-check-view/modal-check-view.page';
 
 @Component({
