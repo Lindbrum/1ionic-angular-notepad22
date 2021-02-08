@@ -36,7 +36,10 @@ export class NotaPage implements OnInit {
 // funzione chiamata dal pulsante "salva"
     addNote() {
         this.notesService.createNote(this.title, this.content, this.color);
-        this.navCtrl.back();
+        this.notesService.save();
+        this.notesService.load();
+        this.navCtrl.navigateBack('/notes');
+        this.up();
     }
 
     // Pulsante per login
@@ -69,4 +72,25 @@ export class NotaPage implements OnInit {
             modals.present();
         });
     }
+
+
+
+
+    up(){
+        const noteId = this.route.snapshot.paramMap.get('id');
+        this.notesService.save();
+
+        // Check that the data is loaded before getting the note
+        // This handles the case where the detail page is loaded directly via the URL
+        if (this.notesService.loaded){
+            this.notesService.getNote(noteId).subscribe(result => this.note = result);
+
+        } else {
+            this.notesService.load().then(() => {
+                this.notesService.getNote(noteId).subscribe(result => this.note = result);
+
+            });
+        }
+
+        this.navCtrl.navigateBack('/notes'); }
 }
