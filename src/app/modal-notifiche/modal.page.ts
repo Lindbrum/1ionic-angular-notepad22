@@ -21,7 +21,7 @@ export class ModalPage implements OnInit {
   private clickSub: Subscription;
 
 time: any; // string = moment().toISOString();
-//sl: string = moment(this.time).toISOString();
+// sl: string = moment(this.time).toISOString();
   // Metodo notifica
   scheduleDate = moment().toISOString();
   async presentAlert(data) {
@@ -44,6 +44,7 @@ time: any; // string = moment().toISOString();
      // trigger: { at: new Date(new Date().setTime(this.sveglia))},
       led: 'FF0000',
     });
+    // tslint:disable-next-line:max-line-length
     console.log('passato per notifiche; la sveglia è [' + moment(this.time).toISOString() + ']------impostata alla DATE  [' + this.scheduleDate);
   }
 
