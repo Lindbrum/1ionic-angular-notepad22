@@ -37,6 +37,10 @@ const routes: Routes = [
   {
     path: 'posix',
     loadChildren: () => import('./posix/posix.module').then( m => m.PosixPageModule)
+  },
+  {
+    path: 'modal-check-view',
+    loadChildren: () => import('./modal-check-view/modal-check-view.module').then( m => m.ModalCheckViewPageModule)
   }
 
 
