@@ -49,6 +49,9 @@ export class HomePage implements OnInit {
   ngOnInit(){
     this.notesService.load();
   }
+
+  // metodo per aprire schermata login
+
   goToLogin(){
     this.navCtrl.navigateRoot('login');
   }
@@ -60,6 +63,7 @@ export class HomePage implements OnInit {
     this.notesService.load();
 
 // TimeOut per il Refresh
+
     setTimeout(() => {
       console.log('Async operation has ended');
       event.target.complete();

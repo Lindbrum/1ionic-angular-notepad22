@@ -33,6 +33,10 @@ const routes: Routes = [
   {
     path: 'modal-check',
     loadChildren: () => import('./modal-check/modal-check.module').then( m => m.ModalCheckPageModule)
+  },
+  {
+    path: 'posix',
+    loadChildren: () => import('./posix/posix.module').then( m => m.PosixPageModule)
   }
 
 

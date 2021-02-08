@@ -13,6 +13,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {ModalPageModule} from './modal/modal.module';
 import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
 
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -21,6 +24,8 @@ import { LocalNotifications } from '@ionic-native/local-notifications/ngx';
     StatusBar,
     SplashScreen,
     LocalNotifications,
+    Geolocation,
+    NativeGeocoder,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
