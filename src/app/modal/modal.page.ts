@@ -15,17 +15,14 @@ export class ModalPage implements OnInit {
   constructor(
       private modalCtrl: ModalController, private localNotifications: LocalNotifications, private alertCtrl: AlertController
   ) { }
+
   private alertController: any;
   private clickSub: Subscription;
 
-
 time: string = moment().toISOString();
-
-
 
   // Metodo notifica
   scheduleDate = moment(this.time).toDate();
-
 
   async presentAlert(data) {
     const alert = await this.alertController.create({
@@ -42,9 +39,10 @@ time: string = moment().toISOString();
   delayedNotif() {
     this.localNotifications.schedule({
       text: 'spero tu abbia aspettato',
-      trigger: { at: this.scheduleDate },
+     trigger: { at: new Date(new Date().getTime() + 2000) },
       led: 'FF0000',
     });
+    console.log('passato per notifiche');
   }
 
   // Chiude Modal notifiche
