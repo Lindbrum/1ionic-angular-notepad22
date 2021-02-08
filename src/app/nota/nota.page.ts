@@ -60,6 +60,7 @@ export class NotaPage implements OnInit {
             modals.present();
         });
     }
+
 // Apertura modale geolocalizzazione
     async showModal3() {
         const modal = await this.modalCtrl.create({
@@ -68,5 +69,4 @@ export class NotaPage implements OnInit {
             modals.present();
         });
     }
-
 }

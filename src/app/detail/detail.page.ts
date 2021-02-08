@@ -49,7 +49,7 @@ export class DetailPage implements OnInit {
   noteChanged(){
 
 
-this.notesService.save();
+    this.notesService.save();
   }
 
   deleteNote(){
