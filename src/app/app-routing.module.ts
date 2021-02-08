@@ -28,11 +28,11 @@ const routes: Routes = [
     loadChildren: () => import('./nota/nota.module').then( m => m.NotaPageModule)
   },
   {
-    path: 'modal-notify',
-    loadChildren: () => import('./modal-notify/modal.module').then(m => m.ModalPageModule)
+    path: 'modal-notifiche',
+    loadChildren: () => import('./modal-notifiche/modal.module').then(m => m.ModalPageModule)
   },
   {
-    path: 'modal-notify-check',
+    path: 'modal-notifiche-check',
     loadChildren: () => import('./modal-check/modal-check.module').then( m => m.ModalCheckPageModule)
   },
   {
