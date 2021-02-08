@@ -26,21 +26,18 @@ const routes: Routes = [
   {
     path: 'nota',
     loadChildren: () => import('./nota/nota.module').then( m => m.NotaPageModule)
-  },  {
-    path: 'modal',
-    loadChildren: () => import('./modal/modal.module').then( m => m.ModalPageModule)
   },
   {
-    path: 'modal-check',
+    path: 'modal-notifiche',
+    loadChildren: () => import('./modal-notifiche/modal.module').then(m => m.ModalPageModule)
+  },
+  {
+    path: 'modal-notifiche-check',
     loadChildren: () => import('./modal-check/modal-check.module').then( m => m.ModalCheckPageModule)
   },
   {
     path: 'posix',
     loadChildren: () => import('./posix/posix.module').then( m => m.PosixPageModule)
-  },
-  {
-    path: 'modal-check-view',
-    loadChildren: () => import('./modal-check-view/modal-check-view.module').then( m => m.ModalCheckViewPageModule)
   }
 
 

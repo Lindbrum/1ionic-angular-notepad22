@@ -10,6 +10,10 @@
     "cordova-plugin-advanced-http": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
+    "cordova-plugin-geolocation": {
+      "GPS_REQUIRED": "true",
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
     "cordova-plugin-ionic-keyboard": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
@@ -18,6 +22,9 @@
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-local-notification": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
+    "cordova-plugin-nativegeocoder": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-splashscreen": {
@@ -34,16 +41,12 @@
     },
     "cordova-plugin-wkwebview-file-xhr": {
       "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-geolocation": {
-      "GPS_REQUIRED": "true",
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-nativegeocoder": {
-      "PACKAGE_NAME": "io.ionic.starter"
     }
   },
   "dependent_plugins": {
+    "cordova-plugin-add-swift-support": {
+      "PACKAGE_NAME": "io.ionic.starter"
+    },
     "cordova-plugin-file": {
       "PACKAGE_NAME": "io.ionic.starter"
     },
@@ -51,9 +54,6 @@
       "PACKAGE_NAME": "io.ionic.starter"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "io.ionic.starter"
-    },
-    "cordova-plugin-add-swift-support": {
       "PACKAGE_NAME": "io.ionic.starter"
     }
   }

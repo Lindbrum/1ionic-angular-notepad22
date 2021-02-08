@@ -6,7 +6,6 @@
       <excludeFolder url="file://$MODULE_DIR$/dist" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
-      <excludeFolder url="file://$MODULE_DIR$/www" />
       <excludeFolder url="file://$MODULE_DIR$/platforms" />
       <excludeFolder url="file://$MODULE_DIR$/plugins/cordova-plugin-advanced-http" />
       <excludeFolder url="file://$MODULE_DIR$/plugins/cordova-plugin-badge" />
@@ -20,6 +19,7 @@
       <excludeFolder url="file://$MODULE_DIR$/plugins/cordova-plugin-whitelist" />
       <excludeFolder url="file://$MODULE_DIR$/plugins/cordova-plugin-wkwebview-engine" />
       <excludeFolder url="file://$MODULE_DIR$/plugins/cordova-plugin-wkwebview-file-xhr" />
+      <excludeFolder url="file://$MODULE_DIR$/www" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
