@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {AlertController, ModalController, NavController} from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 import { NotesService } from '../services/notes.service';
-import {ModalPage} from '../modal/modal.page';
-import {ModalCheckViewPage} from '../modal-check-view/modal-check-view.page';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +9,7 @@ import {ModalCheckViewPage} from '../modal-check-view/modal-check-view.page';
 })
 export class HomePage implements OnInit {
 
-  constructor(public notesService: NotesService, private alertCtrl: AlertController, private navCtrl: NavController,
-              private modalCtrl: ModalController){
+  constructor(public notesService: NotesService, private alertCtrl: AlertController, private navCtrl: NavController){
 
   }
 
@@ -51,14 +48,6 @@ export class HomePage implements OnInit {
   filterTerm: String;
   ngOnInit(){
     this.notesService.load();
-  }
-
-  async showModalElenco() {
-    const modal = await this.modalCtrl.create({
-      component: ModalCheckViewPage
-    }).then(modals => {
-      modals.present();
-    });
   }
 
   // metodo per aprire schermata login

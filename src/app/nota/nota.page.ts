@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {NotesService} from '../services/notes.service';
 import {AlertController, NavController} from '@ionic/angular';
 import {ModalController} from '@ionic/angular';
-import {ModalPage} from '../modal-notifiche/modal.page';
+import {ModalPage} from '../modal-notify/modal.page';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ModalCheckPage} from '../modal-check/modal-check.page';
 import {PosixPage} from '../posix/posix.page';
@@ -44,7 +44,7 @@ export class NotaPage implements OnInit {
         this.navCtrl.navigateRoot('login');
     }
 
-// Apertura modal-notifiche notifiche
+// Apertura modal-notify notifiche
     async showModal() {
         const modal = await this.modalCtrl.create({
             component: ModalPage
@@ -52,7 +52,7 @@ export class NotaPage implements OnInit {
             modals.present();
         });
     }
-// Apertura modal-notifiche elenco check
+// Apertura modal-notify elenco check
     async showModal2() {
         const modal = await this.modalCtrl.create({
             component: ModalCheckPage
@@ -60,7 +60,6 @@ export class NotaPage implements OnInit {
             modals.present();
         });
     }
-
 // Apertura modale geolocalizzazione
     async showModal3() {
         const modal = await this.modalCtrl.create({
@@ -69,4 +68,5 @@ export class NotaPage implements OnInit {
             modals.present();
         });
     }
+
 }
