@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {AlertController, ModalController} from '@ionic/angular';
-import {ELocalNotificationTriggerUnit, LocalNotifications} from '@ionic-native/local-notifications/ngx';
+import {LocalNotifications} from '@ionic-native/local-notifications/ngx';
 import {Subscription} from 'rxjs';
 import * as moment from 'moment';
 import {Data} from '@angular/router';
@@ -14,13 +14,12 @@ import {Data} from '@angular/router';
 export class ModalPage implements OnInit {
 
   constructor(
-      private modalCtrl: ModalController, private localNotifications: LocalNotifications, private alertCtrl: AlertController
+      private modalCtrl: ModalController, private localNotifications: LocalNotifications
   ) { }
 
   private alertController: any;
   private clickSub: Subscription;
 
-sveglia: any;
 time: string = moment().toISOString();
 
   // Metodo notifica
@@ -44,7 +43,7 @@ time: string = moment().toISOString();
      // trigger: { at: new Date(new Date().setTime(this.sveglia))},
       led: 'FF0000',
     });
-    console.log('passato per notifiche' + this.sveglia);
+    console.log('passato per notifiche' + this.time);
   }
 
   // Chiude Modal notifiche
@@ -52,8 +51,4 @@ time: string = moment().toISOString();
   close(){
     this.modalCtrl.dismiss();
   }
-
-
-
-
 }
