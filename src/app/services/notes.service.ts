@@ -83,9 +83,17 @@ export class NotesService {
   }
 
 
-  update(t, c,iduser,color): string {
+  saveN(note): void {
+    this.notes.push(note);
+    // Save the current array of notes to storage
+    this.storage.set('notes', this.notes);
+    this.load();
+  }
 
-    this.http.put('http://localhost:8080/note/all', {
+
+  update(t, c,iduser,color, id): string {
+
+    this.http.put('http://localhost:8080/note/all'+ id, {
       title: t,
       content: c,
       idUser: iduser,

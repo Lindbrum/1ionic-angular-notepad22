@@ -49,7 +49,9 @@ export class DetailPage implements OnInit {
   noteChanged(){
 
 
-    this.notesService.save();
+    this.notesService.saveN(this.note);
+
+    this.notesService.load();
   }
 
   deleteNote(){
@@ -57,10 +59,13 @@ export class DetailPage implements OnInit {
 
     this.navCtrl.navigateBack('/notes');
 
+    this.up();
+
   }
 
   up(){
   const noteId = this.route.snapshot.paramMap.get('id');
+  this.noteChanged();
   this.notesService.save();
   // Check that the data is loaded before getting the note
   // This handles the case where the detail page is loaded directly via the URL
@@ -68,7 +73,8 @@ export class DetailPage implements OnInit {
   this.notesService.getNote(noteId).subscribe(result => this.note = result);
 
 } else {
-  this.notesService.load().then(() => {
+    this.notesService.update(this.note.title, this.note.content, this.note.id_user, this.note.color, noteId);
+    this.notesService.load().then(() => {
     this.notesService.getNote(noteId).subscribe(result => this.note = result);
     this.navCtrl.navigateBack('/notes');
   });
