@@ -6,6 +6,8 @@ import {ModalPage} from '../modal-notifiche/modal.page';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {ModalCheckPage} from '../modal-check/modal-check.page';
 import {PosixPage} from '../posix/posix.page';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
     selector: 'app-nota',
@@ -14,7 +16,7 @@ import {PosixPage} from '../posix/posix.page';
 })
 export class NotaPage implements OnInit {
 
-    constructor(public notesService: NotesService, private alertCtrl: AlertController, private navCtrl: NavController,
+    constructor(private route: ActivatedRoute, public notesService: NotesService, private alertCtrl: AlertController, private navCtrl: NavController,
                 private modalCtrl: ModalController, private formBuilder: FormBuilder) {
 
         this.myForm = formBuilder.group({
@@ -29,8 +31,11 @@ export class NotaPage implements OnInit {
     private playerCount = 1;
     gesf: any;
 
+
     ngOnInit() {
-        this.notesService.load();
+        this.notesService.load()
+
+        ;
     }
 
 // funzione chiamata dal pulsante "salva"
@@ -69,4 +74,22 @@ export class NotaPage implements OnInit {
             modals.present();
         });
     }
+
+    up(){
+        const noteId = this.route.snapshot.paramMap.get('id');
+        this.notesService.save();
+
+        // Check that the data is loaded before getting the note
+        // This handles the case where the detail page is loaded directly via the URL
+        if (this.notesService.loaded){
+
+        } else {
+            this.notesService.load().then(() => {
+
+
+            });
+        }
+
+        this.navCtrl.navigateBack('/notes'); }
+
 }
