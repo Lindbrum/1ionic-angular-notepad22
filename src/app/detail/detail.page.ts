@@ -13,6 +13,7 @@ export class DetailPage implements OnInit {
 
   public note: { id: string; title: string; content: string; color: string, id_user: string };
   color: string;
+  private noteId = this.route.snapshot.paramMap.get('id');
 
   constructor(private route: ActivatedRoute, private notesService: NotesService, private navCtrl: NavController) {
 
@@ -49,7 +50,10 @@ export class DetailPage implements OnInit {
   noteChanged(){
 
 
-    this.notesService.saveN(this.note);
+    this.notesService.update(this.note.title, this.note.content, this.note.id_user, this.note.color, this.noteId);
+
+    // this.notesService.saveN(this.note);
+
 
     this.notesService.load();
   }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../services/user.service';
 import {ModalController} from '@ionic/angular';
+import { NavController } from '@ionic/angular';
 
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
@@ -17,7 +18,7 @@ export class LoginPage implements OnInit {
   person: any;
   allert: any;
 
-  constructor(public userService: UserService) {
+  constructor(public userService: UserService,private navCtrl: NavController) {
 
   }
 
@@ -30,5 +31,6 @@ export class LoginPage implements OnInit {
      loging(){
   this.person = this.userService.gettoken(this.username, this.password);
   this.allert = JSON.stringify(this.person);
+  //this.navCtrl.back();
 
 } }

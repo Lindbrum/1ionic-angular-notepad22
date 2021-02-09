@@ -37,4 +37,24 @@ constructor(private storage: Storage, private http: HttpClient) {
 
 
     return this.res; }
-}
+
+
+    registration( mail, pass, nome): any{
+  this.http.post('http://localhost:8080/user/saveUser',
+     {
+  username: nome,
+  password: pass,
+
+  email : mail,
+  roles: ['Admin', 'Manager']}
+
+
+      ).subscribe(result => this.res = JSON.stringify(result));
+
+  return console.log(this.res);
+}}
+
+
+
+
+
