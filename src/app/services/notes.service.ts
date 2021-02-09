@@ -28,6 +28,7 @@ export class NotesService {
   //  return this.http.get<Note[]>(Urls.allNotes);  ci servirà più avanti
     return of(this.notes); // "of" converte array in uno stream di dati
   }
+
 */
   private res: any;
 
@@ -93,7 +94,7 @@ export class NotesService {
 
   update(t, c,iduser,color, id): string {
 
-    this.http.put('http://localhost:8080/note/all'+ id, {
+    this.http.put('http://localhost:8080/note/all/' + id, {
       title: t,
       content: c,
       idUser: iduser,
