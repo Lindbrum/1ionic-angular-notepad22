@@ -16,37 +16,6 @@ export class HomePage implements OnInit {
 
   }
 
-
-/*
-   addNote(){
-
-    this.alertCtrl.create({
-      header: 'nuova nota',
-      message: 'Inserisci un titolo',
-      inputs: [
-        {
-          type: 'text',
-          name: 'title'
-        }
-      ],
-      buttons: [
-        {
-          text: 'elimina'
-        },
-        {
-          text: 'salva',
-          handler: (data) => {
-            this.notesService.createNote(data.title);
-          }
-        }
-      ]
-    }).then((alert) => {
-      alert.present();
-    });
-
-  }
-*/
-
   // tslint:disable-next-line:ban-types
   filterTerm: String;
   ngOnInit(){
