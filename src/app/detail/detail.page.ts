@@ -56,20 +56,6 @@ export class DetailPage implements OnInit {
     this.notesService.deleteNote(this.route.snapshot.paramMap.get('id'));
 
     this.navCtrl.navigateBack('/notes');
-
   }
 
-  up(){
-  const noteId = this.route.snapshot.paramMap.get('id');
-  this.notesService.save();
-  // Check that the data is loaded before getting the note
-  // This handles the case where the detail page is loaded directly via the URL
-  if (this.notesService.loaded){
-  this.notesService.getNote(noteId).subscribe(result => this.note = result);
-
-} else {
-  this.notesService.load().then(() => {
-    this.notesService.getNote(noteId).subscribe(result => this.note = result);
-    this.navCtrl.navigateBack('/notes');
-  });
-}}}
+}
