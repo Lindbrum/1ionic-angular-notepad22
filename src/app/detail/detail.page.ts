@@ -79,3 +79,4 @@ export class DetailPage implements OnInit {
     this.navCtrl.navigateBack('/notes');
   });
 }}}
+

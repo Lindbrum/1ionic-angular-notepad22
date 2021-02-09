@@ -41,10 +41,7 @@ export class NotaPage implements OnInit {
 // funzione chiamata dal pulsante "salva"
     addNote() {
         this.notesService.createNote(this.title, this.content, this.color);
-        this.notesService.save();
-        this.notesService.load();
-        this.navCtrl.navigateBack('/notes');
-        this.up();
+        this.navCtrl.back();
     }
 
     // Pulsante per login
@@ -78,9 +75,6 @@ export class NotaPage implements OnInit {
         });
     }
 
-
-
-
     up(){
         const noteId = this.route.snapshot.paramMap.get('id');
         this.notesService.save();
@@ -97,4 +91,5 @@ export class NotaPage implements OnInit {
         }
 
         this.navCtrl.navigateBack('/notes'); }
+
 }

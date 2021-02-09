@@ -161,7 +161,7 @@ getAllNote(): Observable < Note[] > {
   deleteNote(id): void {
 
     // Get the index in the array of the note that was passed in
-  // this.notes.splice(id, 1);
+  //this.notes.splice(id, 1);
   console.log(id) ;
 
   this.http.delete('http://localhost:8080/note?id=' + (id)).subscribe(response => console.log(response));
